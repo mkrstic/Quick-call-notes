@@ -1,0 +1,20 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--<item-->
+            <!--android:id="@+id/menu_action_cancel"-->
+            <!--android:showAsAction="always|withText"-->
+            <!--android:icon="@drawable/ic_menu_cancel"-->
+            <!--android:title="@string/action_cancel"-->
+            <!--/>-->
+    <item
+            android:id="@+id/menu_action_record"
+            android:showAsAction="always|withText"
+            android:title="@string/action_record"
+            android:icon="@drawable/ic_menu_record"/>
+    <item
+            android:id="@+id/menu_action_save"
+            android:showAsAction="always|withText"
+            android:title="@string/action_save"
+            android:icon="@drawable/ic_menu_accept"/>
+
+</menu>

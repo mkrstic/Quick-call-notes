@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <ImageButton
+            android:layout_width="256dp"
+            android:layout_height="256dp"
+            android:id="@+id/recording_btn_record"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/ic_menu_record"
+            android:maxHeight="256dp"
+            android:maxWidth="256dp"
+            android:adjustViewBounds="false"
+            android:cropToPadding="false"
+            android:scaleType="centerCrop"/>
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Tap icon to stop recording"
+            android:id="@+id/recording_txt_hint"
+            android:layout_above="@+id/recording_btn_record"
+            android:layout_centerHorizontal="true"/>
+
+    <Chronometer
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/recording_chronometer_duration"
+            android:layout_below="@+id/recording_btn_record"
+            android:layout_centerHorizontal="true"
+            android:editable="false"
+            />
+</RelativeLayout>
