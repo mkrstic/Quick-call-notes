@@ -38,12 +38,14 @@ public class Call implements Serializable {
 	public void setDuration(long duration) {
 		this.duration = duration;
 	}
-	public int getType() {
+
+    public int getType() {
 		return type;
 	}
 	public void setType(int type) {
 		this.type = type;
 	}
-	
-	
+
+
+    
 }

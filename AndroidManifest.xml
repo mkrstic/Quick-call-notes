@@ -27,8 +27,7 @@
         </activity>
         <activity
                 android:name="com.mkrstic.callnotes.activity.AfterCallActivity"
-                android:label="@string/title_activity_after_call"
-                android:uiOptions="splitActionBarWhenNarrow">
+                android:label="@string/title_activity_after_call">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
