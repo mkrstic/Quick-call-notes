@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/AfterCallNotes.iml" filepath="$PROJECT_DIR$/AfterCallNotes.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../RadialMenuWidget/RadialMenuWidget.iml" filepath="$PROJECT_DIR$/../RadialMenuWidget/RadialMenuWidget.iml" />
       <module fileurl="file://$PROJECT_DIR$/../actionbarsherlock/actionbarsherlock.iml" filepath="$PROJECT_DIR$/../actionbarsherlock/actionbarsherlock.iml" />
     </modules>
   </component>
