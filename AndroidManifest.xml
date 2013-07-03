@@ -24,7 +24,7 @@
         <activity
                 android:name="com.mkrstic.callnotes.activity.AfterCallActivity"
                 android:label="@string/title_activity_after_call"
-                android:theme="@style/LightDialog">
+                android:theme="@android:style/Theme.Dialog">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>

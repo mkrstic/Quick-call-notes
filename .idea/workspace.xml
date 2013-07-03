@@ -22,66 +22,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8f0356a8-e396-40c3-a81e-fca7231f8cbd" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/ic_action_discard.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/ic_action_discard.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/ic_action_discard.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/ic_action_discard.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/ic_action_discard_holo_dark.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/ic_action_discard_holo_dark.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/ic_action_discard_holo_dark.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/ic_action_discard_holo_dark.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/ic_action_done_holo_dark.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/ic_action_done_holo_dark.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/ic_action_done_holo_dark.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/ic_action_done_holo_dark.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/ic_action_new_event.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/ic_action_new_event.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/ic_action_new_event.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/ic_action_new_event.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/ic_action_new_event_holo_dark.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/ic_action_new_event_holo_dark.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/ic_action_new_event_holo_dark.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/ic_action_new_event_holo_dark.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/ic_action_record_holo_dark.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/ic_action_record_holo_dark.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/ic_action_record_holo_dark.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/ic_action_record_holo_dark.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/ic_end_call_holo_dark.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/ic_end_call_holo_dark.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/ic_end_call_holo_dark.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/ic_end_call_holo_dark.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/ic_time_holo_dark.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/ic_time_holo_dark.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/ic_time_holo_dark.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/ic_time_holo_dark.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mkrstic/callnotes/activity/CreateNoteActivity.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/actionbar_custom_view_done.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/activity_create_note.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/menu/activity_create_note.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/radial_menu_v4.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/drawable-hdpi/ic_menu_discard.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/drawable-mdpi/ic_menu_discard.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/drawable-xhdpi/ic_menu_discard.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/drawable/ic_menu_discard.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/layout/activity_after_call_2.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/mkrstic/callnotes/activity/MainActivity.java" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/res/drawable-hdpi/ic_menu_record.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/ic_action_record.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/res/drawable-mdpi/ic_menu_record.png" afterPath="$PROJECT_DIR$/res/drawable-mdpi/ic_action_record.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/res/drawable-xhdpi/ic_menu_record.png" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/ic_action_record.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/res/drawable/ic_menu_record.png" afterPath="$PROJECT_DIR$/res/drawable/ic_action_record.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/res/menu/after_call.xml" afterPath="$PROJECT_DIR$/res/menu/activity_after_call.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mkrstic/callnotes/activity/AfterCallActivity.java" afterPath="$PROJECT_DIR$/src/com/mkrstic/callnotes/activity/AfterCallActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AfterCallNotes.iml" afterPath="$PROJECT_DIR$/AfterCallNotes.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AndroidManifest.xml" afterPath="$PROJECT_DIR$/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/AndroidManifest.xml" afterPath="$PROJECT_DIR$/bin/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mkrstic/callnotes/util/ContactHelper.java" afterPath="$PROJECT_DIR$/src/com/mkrstic/callnotes/util/ContactHelper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mkrstic/callnotes/receiver/MyPhoneStateListener.java" afterPath="$PROJECT_DIR$/src/com/mkrstic/callnotes/receiver/MyPhoneStateListener.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/activity_after_call.xml" afterPath="$PROJECT_DIR$/res/layout/activity_after_call.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/activity_recording.xml" afterPath="$PROJECT_DIR$/res/layout/activity_recording.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values/strings.xml" afterPath="$PROJECT_DIR$/res/values/strings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values/styles.xml" afterPath="$PROJECT_DIR$/res/values/styles.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="AfterCallNotes.iws" />
@@ -165,10 +108,28 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="AndroidManifest.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="25" column="47" selection-start="1167" selection-end="1167" vertical-scroll-proportion="0.0" vertical-offset="228" max-vertical-offset="1102">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="strings.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="6" column="57" selection-start="271" selection-end="271" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="475">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="styles.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/res/values/styles.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="48" selection-start="298" selection-end="298" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="304">
+            <state line="10" column="12" selection-start="401" selection-end="401" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="304">
               <folding />
             </state>
           </provider>
@@ -177,8 +138,11 @@
       <file leaf-file-name="activity_after_call.xml" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/res/layout/activity_after_call.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="20" selection-start="1085" selection-end="1085" vertical-scroll-proportion="0.29584774" vertical-offset="285" max-vertical-offset="2812">
-              <folding />
+            <state line="134" column="26" selection-start="5873" selection-end="5873" vertical-scroll-proportion="0.6574395" vertical-offset="2166" max-vertical-offset="2869">
+              <folding>
+                <element signature="e#4985#5009#0" expanded="true" />
+                <element signature="e#5826#5846#0" expanded="true" />
+              </folding>
             </state>
           </provider>
           <provider editor-type-id="android-designer">
@@ -207,9 +171,7 @@
         <option value="$PROJECT_DIR$/src/com/mkrstic/callnotes/receiver/IncomingCallReceiver.java" />
         <option value="$PROJECT_DIR$/src/com/mkrstic/callnotes/receiver/MyPhoneStateListener.java" />
         <option value="$PROJECT_DIR$/res/layout/activity_after_call_2.xml" />
-        <option value="$PROJECT_DIR$/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/src/com/mkrstic/callnotes/util/ContactHelper.java" />
-        <option value="$PROJECT_DIR$/res/values/strings.xml" />
         <option value="$USER_HOME$/Downloads/romannurik-code/misc/donediscard/res/menu/discard.xml" />
         <option value="$PROJECT_DIR$/res/menu/create_note.xml" />
         <option value="$USER_HOME$/Downloads/romannurik-code/misc/donediscard/res/layout/actionbar_done_button.xml" />
@@ -219,6 +181,8 @@
         <option value="$PROJECT_DIR$/res/menu/activity_create_note.xml" />
         <option value="$PROJECT_DIR$/res/layout/actionbar_custom_view_done.xml" />
         <option value="$PROJECT_DIR$/src/com/mkrstic/callnotes/activity/CreateNoteActivity.java" />
+        <option value="$PROJECT_DIR$/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/res/layout/activity_after_call.xml" />
       </list>
     </option>
@@ -433,7 +397,7 @@
     <property name="UI_DESIGNER_EDITOR_MODE.PaletteToolWindowManager.WIDTH" value="242" />
     <property name="last_opened_file_path" value="$USER_HOME$/Downloads/romannurik-code/misc/donediscard" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="emulator-5554" />
+    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="noserial-/dev/bus/usb/001/005" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="OverrideImplement.overriding.sorted" value="false" />
@@ -618,7 +582,11 @@
       <created>1372793445745</created>
       <updated>1372793445745</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="x">
+      <created>1372889733556</created>
+      <updated>1372889733556</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -714,16 +682,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/res/layout/activity_main.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="564">
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/mkrstic/callnotes/receiver/MyPhoneStateListener.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="68" column="46" selection-start="1908" selection-end="2189" vertical-scroll-proportion="0.642978" vertical-offset="684" max-vertical-offset="1767">
@@ -784,15 +742,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="25" selection-start="1002" selection-end="1002" vertical-scroll-proportion="0.0" vertical-offset="228" max-vertical-offset="1102">
-          <folding>
-            <element signature="e#1150#1185#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/actionbar_custom_view_done.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="56" column="19" selection-start="2328" selection-end="2328" vertical-scroll-proportion="0.6574395" vertical-offset="684" max-vertical-offset="1273">
@@ -812,6 +761,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="47" selection-start="1167" selection-end="1167" vertical-scroll-proportion="0.0" vertical-offset="228" max-vertical-offset="1102">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="57" selection-start="271" selection-end="271" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="475">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/mkrstic/callnotes/activity/CreateNoteActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="53" column="24" selection-start="1766" selection-end="1766" vertical-scroll-proportion="0.0" vertical-offset="734" max-vertical-offset="1349">
@@ -823,15 +786,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/res/values/styles.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="48" selection-start="298" selection-end="298" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="304">
+        <state line="10" column="12" selection-start="401" selection-end="401" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="304">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/activity_after_call.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="20" selection-start="1085" selection-end="1085" vertical-scroll-proportion="0.29584774" vertical-offset="285" max-vertical-offset="2812">
-          <folding />
+        <state line="134" column="26" selection-start="5873" selection-end="5873" vertical-scroll-proportion="0.6574395" vertical-offset="2166" max-vertical-offset="2869">
+          <folding>
+            <element signature="e#4985#5009#0" expanded="true" />
+            <element signature="e#5826#5846#0" expanded="true" />
+          </folding>
         </state>
       </provider>
       <provider editor-type-id="android-designer">
