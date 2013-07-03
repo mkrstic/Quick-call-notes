@@ -1,96 +1,143 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              xmlns:tools="http://schemas.android.com/tools"
-              android:id="@+id/layout"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
-              tools:context=".AfterCallActivity"
-              android:baselineAligned="false"
+              android:divider="?android:attr/listDivider"
               android:orientation="vertical"
-              android:weightSum="1.0">
+              android:showDividers="middle"
+              xmlns:tools="http://schemas.android.com/tools"
+              tools:context=".AfterCallActivity">
 
     <RelativeLayout
+            android:id="@+id/relative_layout"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="0.35">
+            android:layout_height="wrap_content"
+            android:paddingLeft="3dp"
+            android:paddingRight="3dp"
+            android:layout_marginBottom="0dp">
 
-
-        <QuickContactBadge
-                android:id="@+id/aftercall_quickcontactbadge_contact"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="30dp"
-                android:layout_marginRight="30dp"
+        <ImageView
+                android:id="@+id/aftercall_imageview_contact"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentTop="true"
-                android:scaleType="centerCrop"
-                />
+                android:src="@drawable/ic_contact"
+                android:visibility="visible"/>
 
         <ProgressBar
                 android:id="@+id/aftercall_progressbar_contact"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_centerHorizontal="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
                 android:scaleType="centerCrop"
                 android:indeterminate="true"
                 style="@style/Widget.Sherlock.ProgressBar"
+                android:visibility="gone"
                 />
 
-        <LinearLayout
+        <TextView
+                android:id="@+id/aftercall_txt_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingTop="8dp"
-                android:paddingBottom="8dp"
-                android:orientation="vertical"
-                android:layout_alignLeft="@+id/aftercall_quickcontactbadge_contact"
-                android:layout_alignRight="@+id/aftercall_quickcontactbadge_contact"
-                android:layout_alignBottom="@+id/aftercall_quickcontactbadge_contact"
-                android:background="#7000">
+                android:shadowColor="#000"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"
+                android:shadowDx="3"
+                android:shadowDy="3"
+                android:shadowRadius="6"
+                android:background="#7000"
+                android:text="Contact name"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#FFF"
+                android:textStyle="bold"
+                android:gravity="center_horizontal"
+                android:layout_alignLeft="@+id/aftercall_imageview_contact"
+                android:layout_alignRight="@+id/aftercall_imageview_contact"
+                android:layout_alignBottom="@+id/aftercall_imageview_contact"
+                />
 
-            <TextView
-                    android:id="@+id/aftercall_txt_name"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:shadowColor="#000"
-                    android:shadowDx="3"
-                    android:shadowDy="3"
-                    android:shadowRadius="6"
-                    android:text="Name"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:textColor="#FFF"
-                    android:textStyle="bold"
-                    android:layout_marginLeft="5dp"
-                    />
+        <TextView
+                android:id="@+id/aftercall_txt_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+381 22 2819254"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/aftercall_imageview_contact"
+                android:drawableLeft="@drawable/ic_end_call"
+                android:drawablePadding="3dp"
+                android:gravity="center_vertical|right"
+                />
 
-            <TextView
-                    android:id="@+id/aftercall_txt_phone"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="(381) 22 2819254"
-                    android:textColor="#CCC"
-                    android:layout_marginLeft="5dp"
-                    android:textAppearance="?android:attr/textAppearanceSmall"/>
-
-        </LinearLayout>
-
+        <TextView
+                android:id="@+id/aftercall_txt_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="28.06.2013. 15:36"
+                android:layout_below="@+id/aftercall_txt_phone"
+                android:drawableLeft="@drawable/ic_time"
+                android:drawablePadding="3dp"
+                android:layout_alignLeft="@+id/aftercall_txt_phone"
+                android:gravity="center_vertical|right"
+                />
+        <View
+                android:id="@+id/aftercall_view_divider"
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="0dp"
+                android:paddingBottom="0dp"
+                android:layout_below="@+id/aftercall_imageview_contact"/>
 
     </RelativeLayout>
-    <EditText
-            android:layout_weight="0.65"
+
+    <LinearLayout
+            android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textMultiLine"
-            android:ems="10"
-            android:id="@+id/editText"
-            android:layout_alignParentBottom="true"
-            android:layout_marginBottom="0dp"
-            android:gravity="left|top"
-            android:hint="Enter text here"
-            />
+            android:background="@null"
+            android:paddingTop="0dp"
+            android:layout_marginTop="0dp"
+            android:divider="?android:attr/listDivider"
+            android:dividerPadding="12dp"
+            android:showDividers="middle"
+            >
 
+        <Button
+                android:id="@+id/aftercall_btn_discard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:drawable/list_selector_background"
+                android:text="@string/action_discard"
+                android:drawableLeft="@drawable/ic_action_discard"
+                android:drawablePadding="2dp"
+                android:layout_weight="1"
+                android:minHeight="48dp"
+                />
+        <View
+                android:id="@+id/aftercall_view_divider"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:paddingTop="0dp"
+                android:layout_marginTop="0dp"
+                android:background="@android:color/darker_gray"
+               />
 
+        <Button
+                android:id="@+id/aftercall_btn_new"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/action_new"
+                android:drawableRight="@drawable/ic_action_new_event"
+                android:drawablePadding="2dp"
+                android:layout_weight="1"
+                android:background="@android:drawable/list_selector_background"
+                android:minHeight="48dp"
+                />
 
-
+    </LinearLayout>
 
 
 </LinearLayout>

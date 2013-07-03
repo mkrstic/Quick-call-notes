@@ -25,16 +25,21 @@ public class ContactHelper {
     }
 
     public Long fetchContactIdByPhone(final String phoneNumber) {
-        Uri uri = Uri.withAppendedPath(ContactsContract.PhoneLookup.CONTENT_FILTER_URI, Uri.encode(phoneNumber));
-        String[] projection = new String[]{ContactsContract.PhoneLookup.DISPLAY_NAME, ContactsContract.PhoneLookup._ID};
-        Cursor cursor = context.getContentResolver().query(uri, projection, null, null, null);
-        Long contactId = null;
-        if (cursor != null && cursor.moveToFirst()) {
-            //String contactName = cursor.getString(cursor.getColumnIndexOrThrow(ContactsContract.PhoneLookup.DISPLAY_NAME));
-            contactId = cursor.getLong(cursor.getColumnIndexOrThrow(ContactsContract.PhoneLookup._ID));
+        try {
+            Uri uri = Uri.withAppendedPath(ContactsContract.PhoneLookup.CONTENT_FILTER_URI, Uri.encode(phoneNumber));
+            String[] projection = new String[]{ContactsContract.PhoneLookup.DISPLAY_NAME, ContactsContract.PhoneLookup._ID};
+            Cursor cursor = context.getContentResolver().query(uri, projection, null, null, null);
+            Long contactId = null;
+            if (cursor != null && cursor.moveToFirst()) {
+                //String contactName = cursor.getString(cursor.getColumnIndexOrThrow(ContactsContract.PhoneLookup.DISPLAY_NAME));
+                contactId = cursor.getLong(cursor.getColumnIndexOrThrow(ContactsContract.PhoneLookup._ID));
+            }
+            cursor.close();
+            return contactId;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
         }
-        cursor.close();
-        return contactId;
     }
 
     private InputStream openDisplayPhoto(long contactId) {

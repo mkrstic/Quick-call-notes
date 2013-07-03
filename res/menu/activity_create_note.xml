@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/createnote_menuitem_record_holo"
+          android:title="@string/action_record"
+          android:icon="@drawable/ic_action_record_holo_dark"
+          android:showAsAction="ifRoom|withText" />
+
+    <item android:id="@+id/createnote_menuitem_discard"
+          android:title="@string/action_discard"
+          android:icon="@drawable/ic_action_discard_holo_dark"
+          android:showAsAction="ifRoom|withText" />
+</menu>

@@ -4,9 +4,11 @@ import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Handler;
+import android.provider.CallLog;
 import android.provider.CallLog.Calls;
 import android.telephony.PhoneStateListener;
 import android.telephony.TelephonyManager;
+import android.text.TextUtils;
 import android.util.Log;
 
 import com.mkrstic.callnotes.activity.AfterCallActivity;
@@ -31,9 +33,19 @@ public class MyPhoneStateListener extends PhoneStateListener {
 		} else if (state == TelephonyManager.CALL_STATE_IDLE) {
 			Log.i(TAG, "IDLE");
 			if (isPhoneCalling) {
-				isPhoneCalling = false;
-				Handler handler = new Handler();
-				handler.postDelayed(new StartAfterCallActivity(context), 500);
+                isPhoneCalling = false;
+                if (TextUtils.isEmpty(incomingNumber)) {
+                    Handler handler = new Handler();
+                    handler.postDelayed(new StartAfterCallActivity(context), 240);
+                } else {
+                    Log.i(TAG, "incomingNumber="+incomingNumber);
+                    Call lastCall = new Call();
+                    lastCall.setNumber(incomingNumber);
+                    lastCall.setDate(System.currentTimeMillis());
+                }
+
+
+
 			}
 		}
 	}

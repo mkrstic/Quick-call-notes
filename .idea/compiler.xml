@@ -8,6 +8,7 @@
       <directory url="file://$USER_HOME$/Downloads/actionbarsherlock/gen" includeSubdirectories="true" />
       <directory url="file://$PROJECT_DIR$/../actionbarsherlock/gen" includeSubdirectories="true" />
       <directory url="file://$PROJECT_DIR$/../RadialMenuWidget/gen" includeSubdirectories="true" />
+      <directory url="file://$USER_HOME$/Downloads/romannurik-code/misc/donediscard/gen" includeSubdirectories="true" />
     </excludeFromCompile>
     <resourceExtensions />
     <wildcardResourcePatterns>

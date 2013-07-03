@@ -10,11 +10,11 @@
             android:id="@+id/menu_action_record"
             android:showAsAction="ifRoom|withText"
             android:title="@string/action_record"
-            android:icon="@drawable/ic_menu_record"/>
+            android:icon="@drawable/ic_action_record"/>
     <item
             android:id="@+id/menu_action_save"
             android:showAsAction="always|withText"
             android:title="@string/action_discard"
-            android:icon="@drawable/ic_menu_discard"/>
+            android:icon="@drawable/ic_action_discard"/>
 
 </menu>

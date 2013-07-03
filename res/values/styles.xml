@@ -1,5 +1,11 @@
 <resources>
 
-    <style name="AppTheme" parent="@style/Theme.Sherlock.Light" />
+    <style name="AppTheme" parent="@style/Theme.Sherlock.Light.DarkActionBar" />
+    <color name="black">#FF000000</color>
+    <color name="whitegrey">#FFF2F2F2</color>
+    <style name="LightDialog" parent="@android:style/Theme.Dialog">
+        <item name="@android:background">@color/whitegrey</item>
+        <item name="@android:textColor">@color/black</item>
+    </style>
 
 </resources>

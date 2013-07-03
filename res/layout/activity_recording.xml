@@ -10,7 +10,7 @@
             android:id="@+id/recording_btn_record"
             android:layout_centerVertical="true"
             android:layout_centerHorizontal="true"
-            android:src="@drawable/ic_menu_record"
+            android:src="@drawable/ic_action_record"
             android:maxHeight="256dp"
             android:maxWidth="256dp"
             android:adjustViewBounds="false"
