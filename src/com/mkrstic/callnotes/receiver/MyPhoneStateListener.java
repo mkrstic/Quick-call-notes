@@ -12,7 +12,7 @@ import android.text.TextUtils;
 import android.util.Log;
 
 import com.mkrstic.callnotes.activity.AfterCallActivity;
-import com.mkrstic.callnotes.model.Call;
+import com.mkrstic.callnotes.model.CallInfo;
 
 public class MyPhoneStateListener extends PhoneStateListener {
 	private static final String TAG = MyPhoneStateListener.class.getName();
@@ -34,25 +34,18 @@ public class MyPhoneStateListener extends PhoneStateListener {
 			Log.i(TAG, "IDLE");
 			if (isPhoneCalling) {
                 isPhoneCalling = false;
-                if (TextUtils.isEmpty(incomingNumber)) {
-                    Handler handler = new Handler();
-                    handler.postDelayed(new StartAfterCallActivity(context), 240);
-                } else {
+                Handler handler = new Handler();
+                handler.postDelayed(new StartAfterCallActivity(context), 240);
+                if (!TextUtils.isEmpty(incomingNumber)) {
                     Log.i(TAG, "incomingNumber="+incomingNumber);
-                    Call lastCall = new Call();
-                    lastCall.setNumber(incomingNumber);
-                    lastCall.setDate(System.currentTimeMillis());
                 }
-
-
-
 			}
 		}
 	}
 
 	class StartAfterCallActivity implements Runnable {
 
-		private Context context;
+		private final Context context;
 
 		public StartAfterCallActivity(Context context) {
 			this.context = context;
@@ -60,36 +53,32 @@ public class MyPhoneStateListener extends PhoneStateListener {
 
 		@Override
 		public void run() {
-			final Call lastCall = findLastCall();
-			if (lastCall != null) {
-				Intent intent = new Intent(context, AfterCallActivity.class);
-				intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
-				intent.putExtra(AfterCallActivity.EXTRA_CALL, lastCall);
-				Log.d(TAG, "lastCall=" + lastCall);
-				context.startActivity(intent);
-			}
+			final CallInfo lastCallInfo = findLastCall();
+            if (lastCallInfo == null || lastCallInfo.getType() == CallLog.Calls.MISSED_TYPE) {
+                return;
+            }
+			Intent intent = new Intent(context, AfterCallActivity.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
+            intent.putExtra(AfterCallActivity.EXTRA_CALL, lastCallInfo);
+			Log.d(TAG, "lastCallInfo=" + lastCallInfo);
+			context.startActivity(intent);
 		}
 
-		private Call findLastCall() {
+		private CallInfo findLastCall() {
 			final String[] projection = new String[] { Calls.NUMBER,
 					Calls.CACHED_NAME, Calls.DATE, Calls.DURATION, Calls.TYPE };
 			final String sortBy = Calls.DATE + " desc limit 1";
 			final Cursor cursor = context.getContentResolver().query(
 					Calls.CONTENT_URI, projection, null, null, sortBy);
-			if (cursor.moveToFirst()) {
-				Call lastCall = new Call();
-				lastCall.setNumber(cursor.getString(cursor
-						.getColumnIndex(Calls.NUMBER)));
-				lastCall.setDate(cursor.getLong(cursor
-						.getColumnIndex(Calls.DATE)));
-				lastCall.setDuration(cursor.getLong(cursor
-						.getColumnIndex(Calls.DURATION)));
-				lastCall.setName(cursor.getString(cursor
-						.getColumnIndex(Calls.CACHED_NAME)));
-				lastCall.setType(cursor.getInt(cursor
-						.getColumnIndex(Calls.TYPE)));
+			if (cursor != null && cursor.moveToFirst()) {
+				CallInfo lastCallInfo = new CallInfo();
+                lastCallInfo.setNumber(cursor.getString(0));
+                lastCallInfo.setContactName(cursor.getString(1));
+                lastCallInfo.setDateTimeInMillis(cursor.getLong(2));
+                lastCallInfo.setDurationInSeconds(cursor.getInt(3));
+                lastCallInfo.setType(cursor.getInt(4));
 				cursor.close();
-				return lastCall;
+				return lastCallInfo;
 			}
 			return null;
 		}

@@ -17,4 +17,6 @@
     <string name="action_new">Take note</string>
     <string name="action_done">Done</string>
     <string name="action_discard">Discard</string>
+    <string name="calendar_event_title">Phone call with %1$s (%2$s)</string>
+    <string name="title_activity_launcher">Quick call notes</string>
 </resources>

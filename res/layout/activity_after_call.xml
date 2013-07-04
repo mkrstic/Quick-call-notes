@@ -11,9 +11,8 @@
             android:id="@+id/relative_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingLeft="3dp"
-            android:paddingRight="3dp"
-            android:layout_marginBottom="0dp">
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp">
 
         <ImageView
                 android:id="@+id/aftercall_imageview_contact"
@@ -48,7 +47,7 @@
                 android:shadowDy="3"
                 android:shadowRadius="6"
                 android:background="#7000"
-                android:text="Contact name"
+                android:text="Contact contactName"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:textColor="#FFF"
                 android:textStyle="bold"

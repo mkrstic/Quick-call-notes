@@ -822,7 +822,7 @@ public class MySlidingDrawer extends ViewGroup {
     @Override
     public void onInitializeAccessibilityNodeInfo(AccessibilityNodeInfo info) {
         //super.onInitializeAccessibilityNodeInfo(info);
-        //info.setClassName(MySlidingDrawer.class.getName());
+        //info.setClassName(MySlidingDrawer.class.getContactName());
     }
 
     private void closeDrawer() {

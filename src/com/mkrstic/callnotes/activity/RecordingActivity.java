@@ -5,11 +5,10 @@ import android.os.Environment;
 import android.view.View;
 import android.widget.Chronometer;
 import android.widget.ImageButton;
-import android.widget.TextView;
 
 import com.actionbarsherlock.app.SherlockFragmentActivity;
 import com.mkrstic.callnotes.R;
-import com.mkrstic.callnotes.model.Call;
+import com.mkrstic.callnotes.model.CallInfo;
 import com.mkrstic.callnotes.util.AudioHelper;
 
 
@@ -21,14 +20,14 @@ public class RecordingActivity extends SherlockFragmentActivity implements View.
     private ImageButton stopBtn;
     private Chronometer chronometer;
     private AudioHelper recorder;
-    private Call call;
+    private CallInfo callInfo;
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recording);
         bindViews();
         stopBtn.setOnClickListener(this);
-        call = mockReadCallExtra();
+        callInfo = mockReadCallExtra();
         setupRecorder();
         startRecording();
     }
@@ -59,23 +58,23 @@ public class RecordingActivity extends SherlockFragmentActivity implements View.
 
     private void setupRecorder() {
         final String sdcardPath = Environment.getExternalStorageDirectory().getAbsolutePath();
-        final String filename = sdcardPath + "/" + getApplication().getPackageName() + "_" + call.getName() + "_" + call.getDate() + ".3gp";
+        final String filename = sdcardPath + "/" + getApplication().getPackageName() + "_" + callInfo.getContactName() + "_" + callInfo.getDateTimeInMillis() + ".3gp";
         recorder = new AudioHelper(filename);
     }
 
-    private Call readCallExtra() {
+    private CallInfo readCallExtra() {
         if (!getIntent().hasExtra(AfterCallActivity.EXTRA_CALL)) {
             finish();
         }
-        return (Call) getIntent().getSerializableExtra(AfterCallActivity.EXTRA_CALL);
+        return (CallInfo) getIntent().getSerializableExtra(AfterCallActivity.EXTRA_CALL);
     }
-    private Call mockReadCallExtra() {
-        Call call = new Call();
-        call.setDate(System.currentTimeMillis());
-        call.setDuration(1024);
-        call.setName("Ivana");
-        call.setNumber("+38166202157");
-        return call;
+    private CallInfo mockReadCallExtra() {
+        CallInfo callInfo = new CallInfo();
+        callInfo.setDateTimeInMillis(System.currentTimeMillis());
+        callInfo.setDurationInSeconds(1024);
+        callInfo.setContactName("Ivana");
+        callInfo.setNumber("+38166202157");
+        return callInfo;
     }
 
 

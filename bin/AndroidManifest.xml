@@ -31,7 +31,7 @@
         </activity>
 
         <receiver
-            android:name="com.mkrstic.callnotes.receiver.IncomingCallReceiver"
+            android:name=".receiver.PhoneStateReceiver"
             android:enabled="true"
             android:exported="true" >
             <intent-filter>

@@ -6,7 +6,7 @@ import android.content.Intent;
 import android.telephony.PhoneStateListener;
 import android.telephony.TelephonyManager;
 
-public class IncomingCallReceiver extends BroadcastReceiver {
+public class PhoneStateReceiver extends BroadcastReceiver {
 	private static PhoneStateListener phoneStateListener;
 
 	@Override
