@@ -73,7 +73,7 @@ public class AfterCallActivity extends Activity implements View.OnClickListener 
             nameTxtView.setText(name);
         }
         Date callDate = new Date(callInfo.getDateTimeInMillis());
-        java.text.DateFormat dateFormat = DateFormat.getDateFormat(AfterCallActivity.this);
+        java.text.DateFormat dateFormat = DateFormat.getTimeFormat(AfterCallActivity.this);
         timeTxtView.setText(dateFormat.format(callDate));
         new AddContactThumbTask().execute(callInfo.getPhoneNumber());
     }
@@ -104,7 +104,7 @@ public class AfterCallActivity extends Activity implements View.OnClickListener 
             ContactHelper contactHelper = new ContactHelper(AfterCallActivity.this);
             Long contactId = contactHelper.fetchContactIdByPhone(phoneNumber);
             if (contactId != null) {
-                InputStream is = contactHelper.fetchPhoto(contactId.longValue());
+                InputStream is = contactHelper.fetchPhoto(contactId);
                 if (is != null) {
                     return BitmapFactory.decodeStream(is);
                 }
