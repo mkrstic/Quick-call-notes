@@ -49,7 +49,8 @@ public class CalendarHelper {
     }
 
     private int addEvent14(CallInfo callInfo) {
-        int calendarId = getOrCreateAppCalendar();
+        //int calendarId = getOrCreateAppCalendar();
+        int calendarId = 1;
         final ContentResolver cr = context.getContentResolver();
         ContentValues values = new ContentValues();
         values.put(CalendarContract.Events.DTSTART, callInfo.getDateTimeInMillis());
@@ -107,6 +108,7 @@ public class CalendarHelper {
             cv.put(CalendarContract.Calendars.NAME, calendarName);
             cv.put(CalendarContract.Calendars.CALENDAR_DISPLAY_NAME, calendarName);
             cv.put(CalendarContract.Calendars.VISIBLE, 1);
+            cv.put(CalendarContract.Calendars.CALENDAR_TIME_ZONE, TimeZone.getDefault().getID());
             Uri result = cr.insert(CalendarContract.Calendars.CONTENT_URI, cv);
             if (result == null) {
                 throw new RuntimeException("Could not create calendar");
