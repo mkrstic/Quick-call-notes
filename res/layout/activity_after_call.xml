@@ -21,8 +21,9 @@
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentTop="true"
                 android:src="@drawable/ic_contact"
-                android:background="@android:color/white"
-                android:visibility="visible"/>
+                android:background="@drawable/rounded_white_background"
+
+                />
 
         <ProgressBar
                 android:id="@+id/aftercall_progressbar_contact"
@@ -47,7 +48,7 @@
                 android:shadowDy="3"
                 android:shadowRadius="6"
                 android:background="#7000"
-                android:text="Contact contactName"
+                android:text="Contact name"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:textColor="#FFF"
                 android:textStyle="bold"
@@ -81,6 +82,7 @@
                 android:layout_alignLeft="@+id/aftercall_txt_phone"
                 android:gravity="center_vertical|right"
                 />
+
         <View
                 android:id="@+id/aftercall_view_divider"
                 android:layout_width="fill_parent"
@@ -117,6 +119,7 @@
                 android:minHeight="48dp"
                 android:textColor="@android:color/white"
                 />
+
         <View
                 android:id="@+id/aftercall_view_divider"
                 android:layout_width="1dp"
@@ -124,7 +127,7 @@
                 android:paddingTop="0dp"
                 android:layout_marginTop="0dp"
                 android:background="@android:color/white"
-               />
+                />
 
         <Button
                 android:id="@+id/aftercall_btn_new"
@@ -136,8 +139,10 @@
                 android:layout_weight="1"
                 android:background="@android:drawable/list_selector_background"
                 android:minHeight="48dp"
-                android:textColor="@android:color/white"
-                />
+                android:textColor="@android:color/white">
+
+            <requestFocus/>
+        </Button>
 
     </LinearLayout>
 

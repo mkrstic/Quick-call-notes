@@ -8,7 +8,6 @@ import android.provider.CallLog;
 import android.provider.CallLog.Calls;
 import android.telephony.PhoneStateListener;
 import android.telephony.TelephonyManager;
-import android.text.TextUtils;
 import android.util.Log;
 
 import com.mkrstic.callnotes.activity.AfterCallActivity;
@@ -17,7 +16,7 @@ import com.mkrstic.callnotes.model.CallInfo;
 public class MyPhoneStateListener extends PhoneStateListener {
 	private static final String TAG = MyPhoneStateListener.class.getName();
 
-	private boolean isPhoneCalling = false;
+	private boolean callActive = false;
 	private final Context context;
 
 	public MyPhoneStateListener(Context context) {
@@ -29,16 +28,14 @@ public class MyPhoneStateListener extends PhoneStateListener {
 		super.onCallStateChanged(state, incomingNumber);
 		if (state == TelephonyManager.CALL_STATE_OFFHOOK) {
 			Log.i(TAG, "OFFHOOK");
-			isPhoneCalling = true;
+			callActive = true;
 		} else if (state == TelephonyManager.CALL_STATE_IDLE) {
 			Log.i(TAG, "IDLE");
-			if (isPhoneCalling) {
-                isPhoneCalling = false;
+			if (callActive) {
+                callActive = false;
+                Log.i(TAG, "Starting handler...");
                 Handler handler = new Handler();
-                handler.postDelayed(new StartAfterCallActivity(context), 240);
-                if (!TextUtils.isEmpty(incomingNumber)) {
-                    Log.i(TAG, "incomingNumber="+incomingNumber);
-                }
+                handler.postDelayed(new StartAfterCallActivity(context), 340);
 			}
 		}
 	}
@@ -55,12 +52,13 @@ public class MyPhoneStateListener extends PhoneStateListener {
 		public void run() {
 			final CallInfo lastCallInfo = findLastCall();
             if (lastCallInfo == null || lastCallInfo.getType() == CallLog.Calls.MISSED_TYPE) {
+                Log.i(TAG, "Last call not found");
                 return;
             }
+            Log.i(TAG, "Last call =" + lastCallInfo);
 			Intent intent = new Intent(context, AfterCallActivity.class);
             intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
             intent.putExtra(AfterCallActivity.EXTRA_CALL, lastCallInfo);
-			Log.d(TAG, "lastCallInfo=" + lastCallInfo);
 			context.startActivity(intent);
 		}
 

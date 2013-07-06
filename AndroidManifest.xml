@@ -34,23 +34,26 @@
         <activity
                 android:theme="@android:style/Theme.Dialog"
                 android:name=".activity.AfterCallActivity"
-                android:label="@string/title_activity_after_call">
+                android:label="@string/title_activity_after_call"
+                >
         </activity>
 
 
-        <activity
-                android:name=".activity.RecordingActivity"
-                android:label="@string/title_activity_recording">
-
-        </activity>
         <activity
                 android:name=".activity.CreateNoteActivity"
                 android:label="Make note"/>
-        <receiver
+        <!--<receiver
                 android:name=".receiver.PhoneStateReceiver"
                 android:enabled="true"
                 android:exported="true">
             <intent-filter>
+                <action android:name="android.intent.action.PHONE_STATE"/>
+            </intent-filter>
+        </receiver>-->
+
+        <receiver android:name=".receiver.CallReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.NEW_OUTGOING_CALL"/>
                 <action android:name="android.intent.action.PHONE_STATE"/>
             </intent-filter>
         </receiver>

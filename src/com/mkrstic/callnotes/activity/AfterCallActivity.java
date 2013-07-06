@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.text.TextUtils;
 
 import android.text.format.DateFormat;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -41,12 +42,13 @@ public class AfterCallActivity extends Activity implements View.OnClickListener 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_after_call);
         bindViews();
-        mCallInfo = (CallInfo) getIntent().getSerializableExtra(EXTRA_CALL);
-        if (mCallInfo == null) {
-            Toast.makeText(AfterCallActivity.this, "Error. Call info not found", Toast.LENGTH_SHORT).show();
-            finish();
-        }
-        populateViews(mCallInfo);
+        loadInfoFromIntent(getIntent());
+    }
+
+    @Override
+    protected void onNewIntent(Intent intent) {
+        super.onNewIntent(intent);
+        loadInfoFromIntent(intent);
     }
 
     @Override
@@ -63,6 +65,15 @@ public class AfterCallActivity extends Activity implements View.OnClickListener 
     }
 
 
+    private void loadInfoFromIntent(final Intent intent) {
+        mCallInfo = (CallInfo) intent.getSerializableExtra(EXTRA_CALL);
+        if (mCallInfo == null) {
+            Log.i("AfterCallActivity", "Call info is null!!");
+            Toast.makeText(AfterCallActivity.this, "Error. Call info not found", Toast.LENGTH_SHORT).show();
+            finish();
+        }
+        populateViews(mCallInfo);
+    }
 
     private void populateViews(final CallInfo callInfo) {
         phoneTxtView.setText(callInfo.getPhoneNumber());
@@ -117,7 +128,7 @@ public class AfterCallActivity extends Activity implements View.OnClickListener 
         @Override
         protected void onPostExecute(Bitmap result) {
             super.onPostExecute(result);
-            imageProgressBar.setVisibility(ProgressBar.INVISIBLE);
+            imageProgressBar.setVisibility(ProgressBar.GONE);
             if (result == null) {
                 contactImage.setImageDrawable(getResources().getDrawable(R.drawable.ic_contact));
             } else {

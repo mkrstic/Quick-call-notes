@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top">
+
+    <ImageView
+            android:layout_width="128dp"
+            android:layout_height="128dp"
+            android:id="@+id/recording_imageview_record"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/ic_mic"
+            android:adjustViewBounds="false"
+            android:cropToPadding="false"
+            android:padding="10dp"
+            android:scaleType="fitCenter"/>
+
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/recording_txt_status"
+            android:layout_toRightOf="@+id/recording_imageview_record"
+            android:layout_alignTop="@+id/recording_imageview_record"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="5dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/recording"
+            />
+
+    <Chronometer
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/recording_chronometer_duration"
+            android:layout_below="@+id/recording_txt_status"
+            android:layout_alignLeft="@+id/recording_txt_status"
+            android:gravity="left"
+            android:layout_marginTop="7dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            />
+
+    <Button
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:id="@+id/recording_btn_stop"
+            android:layout_alignLeft="@+id/recording_chronometer_duration"
+            android:layout_alignBottom="@+id/recording_imageview_record"
+            android:drawableLeft="@drawable/ic_action_done_holo_dark"
+            android:drawablePadding="5dp"
+            android:text="@string/action_done"
+            />
+</RelativeLayout>

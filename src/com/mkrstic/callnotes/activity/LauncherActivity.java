@@ -13,7 +13,6 @@ public class LauncherActivity extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Intent intent = new Intent(this, AfterCallActivity.class);
-        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
         intent.putExtra(AfterCallActivity.EXTRA_CALL, mockReadCallExtra());
         startActivity(intent);
         finish();

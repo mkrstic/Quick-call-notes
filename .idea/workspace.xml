@@ -1,5 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AndroidConfiguredLogFilters">
+    <filters>
+      <filter>
+        <option name="logLevel" value="verbose" />
+        <option name="logMessagePattern" value="" />
+        <option name="logTagPattern" value="" />
+        <option name="name" value="com.mkrstic.callnotes" />
+        <option name="packageNamePattern" value="com.mkrstic.callnotes" />
+        <option name="pid" value="" />
+      </filter>
+    </filters>
+  </component>
   <component name="AndroidLayoutPreviewToolWindow">
     <option name="state">
       <GlobalState />
@@ -18,14 +30,66 @@
           <theme>@android:style/Theme.Dialog</theme>
         </config>
       </layout>
+      <layout url="file://$PROJECT_DIR$/res/layout/activity_create_note.xml">
+        <config>
+          <device>Nexus 4</device>
+          <theme>@style/AppTheme</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/res/layout/dialog_recording.xml">
+        <config>
+          <device>Nexus 4</device>
+          <theme>@android:style/Theme.DeviceDefault.Dialog</theme>
+        </config>
+      </layout>
     </layouts>
+  </component>
+  <component name="AndroidLogFilters">
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="com.mkrstic.callnotes" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8f0356a8-e396-40c3-a81e-fca7231f8cbd" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/android-support-v4.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/ic_action_remove.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/ic_action_remove.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/ic_action_remove.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/ic_info.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/ic_info.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/ic_info.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/ic_mic.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mkrstic/callnotes/receiver/CallReceiver.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mkrstic/callnotes/activity/RecordingDialog.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mkrstic/callnotes/model/RecordingListener.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/dialog_recording.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/rounded_white_background.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/drawable-hdpi/ic_menu_cancel.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/drawable-mdpi/ic_menu_cancel.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/drawable-xhdpi/ic_menu_cancel.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/drawable/ic_action_discard.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/drawable/ic_action_discard_holo_dark.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/drawable/ic_action_done_holo_dark.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/drawable/ic_action_new_event.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/drawable/ic_action_new_event_holo_dark.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/drawable/ic_action_record.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/drawable/ic_action_record_holo_dark.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/drawable/ic_end_call.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/drawable/ic_end_call_holo_dark.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/drawable/ic_menu_accept.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/drawable/ic_menu_cancel.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/drawable/ic_time.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/drawable/ic_time_holo_dark.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/layout/activity_recording.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/mkrstic/callnotes/activity/RecordingActivity.java" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/mkrstic/callnotes/util/AudioHelper.java" afterPath="$PROJECT_DIR$/src/com/mkrstic/callnotes/util/RecordingHelper.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mkrstic/callnotes/activity/AfterCallActivity.java" afterPath="$PROJECT_DIR$/src/com/mkrstic/callnotes/activity/AfterCallActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AfterCallNotes.iml" afterPath="$PROJECT_DIR$/AfterCallNotes.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/android_support_v4.xml" afterPath="$PROJECT_DIR$/.idea/libraries/android_support_v4.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AndroidManifest.xml" afterPath="$PROJECT_DIR$/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mkrstic/callnotes/activity/CreateNoteActivity.java" afterPath="$PROJECT_DIR$/src/com/mkrstic/callnotes/activity/CreateNoteActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mkrstic/callnotes/activity/LauncherActivity.java" afterPath="$PROJECT_DIR$/src/com/mkrstic/callnotes/activity/LauncherActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mkrstic/callnotes/receiver/MyPhoneStateListener.java" afterPath="$PROJECT_DIR$/src/com/mkrstic/callnotes/receiver/MyPhoneStateListener.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mkrstic/callnotes/receiver/PhoneStateReceiver.java" afterPath="$PROJECT_DIR$/src/com/mkrstic/callnotes/receiver/PhoneStateReceiver.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/activity_after_call.xml" afterPath="$PROJECT_DIR$/res/layout/activity_after_call.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/activity_create_note.xml" afterPath="$PROJECT_DIR$/res/layout/activity_create_note.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/menu/activity_create_note.xml" afterPath="$PROJECT_DIR$/res/menu/activity_create_note.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values/strings.xml" afterPath="$PROJECT_DIR$/res/values/strings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="AfterCallNotes.iws" />
@@ -98,41 +162,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="CreateNoteActivity.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/mkrstic/callnotes/activity/CreateNoteActivity.java">
+      <file leaf-file-name="CallReceiver.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/mkrstic/callnotes/receiver/CallReceiver.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="78" column="5" selection-start="2733" selection-end="2733" vertical-scroll-proportion="0.0" vertical-offset="634" max-vertical-offset="1824">
+            <state line="28" column="16" selection-start="844" selection-end="844" vertical-scroll-proportion="-0.7972973" vertical-offset="776" max-vertical-offset="1938">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AfterCallActivity.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/mkrstic/callnotes/activity/AfterCallActivity.java">
+      <file leaf-file-name="AndroidManifest.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="106" column="67" selection-start="3964" selection-end="3964" vertical-scroll-proportion="0.34917128" vertical-offset="1299" max-vertical-offset="2204">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="activity_after_call.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/layout/activity_after_call.xml">
-          <provider editor-type-id="android-designer">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="2850">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CalendarHelper.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/mkrstic/callnotes/util/CalendarHelper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="42" column="17" selection-start="1189" selection-end="1189" vertical-scroll-proportion="38.0" vertical-offset="627" max-vertical-offset="2489">
-              <folding />
+            <state line="56" column="71" selection-start="2436" selection-end="2447" vertical-scroll-proportion="0.0" vertical-offset="681" max-vertical-offset="1273">
+              <folding>
+                <element signature="e#1101#1119#0" expanded="true" />
+                <element signature="e#1271#1304#0" expanded="true" />
+                <element signature="e#1694#1729#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -155,22 +202,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/res/values/attrs.xml" />
-        <option value="$PROJECT_DIR$/res/values/styles.xml" />
-        <option value="$PROJECT_DIR$/res/values-sw720dp-land/dimens.xml" />
-        <option value="$PROJECT_DIR$/res/values/dimens.xml" />
-        <option value="$PROJECT_DIR$/src/com/mkrstic/callnotes/model/CallInfo.java" />
-        <option value="$PROJECT_DIR$/bin/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/../actionbarsherlock/res/values-land/abs__dimens.xml" />
-        <option value="$PROJECT_DIR$/../actionbarsherlock/res/values-large-land-hdpi-1024x600/abs__dimens.xml" />
-        <option value="$PROJECT_DIR$/../actionbarsherlock/res/values-large-land-mdpi-1024x600/abs__dimens.xml" />
-        <option value="$PROJECT_DIR$/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/src/com/mkrstic/callnotes/activity/CreateNoteActivity.java" />
-        <option value="$PROJECT_DIR$/res/values/strings.xml" />
-        <option value="$PROJECT_DIR$/src/com/mkrstic/callnotes/activity/LauncherActivity.java" />
         <option value="$PROJECT_DIR$/res/layout/activity_after_call.xml" />
-        <option value="$PROJECT_DIR$/src/com/mkrstic/callnotes/util/CalendarHelper.java" />
+        <option value="$PROJECT_DIR$/src/com/mkrstic/callnotes/activity/RecordingActivity.java" />
+        <option value="$PROJECT_DIR$/src/com/mkrstic/callnotes/util/AudioHelper.java" />
+        <option value="$PROJECT_DIR$/src/com/mkrstic/callnotes/model/RecordingDialogListener.java" />
+        <option value="$PROJECT_DIR$/src/com/mkrstic/callnotes/model/RecordingListener.java" />
+        <option value="$PROJECT_DIR$/src/com/mkrstic/callnotes/activity/LauncherActivity.java" />
+        <option value="$PROJECT_DIR$/res/layout/activity_create_note.xml" />
+        <option value="$PROJECT_DIR$/res/layout/dialog_recording.xml" />
+        <option value="$PROJECT_DIR$/src/com/mkrstic/callnotes/receiver/PhoneStateReceiver.java" />
         <option value="$PROJECT_DIR$/src/com/mkrstic/callnotes/activity/AfterCallActivity.java" />
+        <option value="$PROJECT_DIR$/src/com/mkrstic/callnotes/util/RecordingHelper.java" />
+        <option value="$PROJECT_DIR$/src/com/mkrstic/callnotes/activity/CreateNoteActivity.java" />
+        <option value="$PROJECT_DIR$/src/com/mkrstic/callnotes/activity/RecordingDialog.java" />
+        <option value="$PROJECT_DIR$/src/com/mkrstic/callnotes/receiver/MyPhoneStateListener.java" />
+        <option value="$PROJECT_DIR$/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/src/com/mkrstic/callnotes/receiver/CallReceiver.java" />
       </list>
     </option>
   </component>
@@ -186,6 +233,9 @@
     <entry key="Project Default">
       <profile-state>
         <expanded-state>
+          <State>
+            <id />
+          </State>
           <State>
             <id>Android Lint</id>
           </State>
@@ -211,6 +261,11 @@
             <id>XML</id>
           </State>
         </expanded-state>
+        <selected-state>
+          <State>
+            <id>Abstraction issues</id>
+          </State>
+        </selected-state>
       </profile-state>
     </entry>
   </component>
@@ -296,7 +351,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="activity" />
+              <option name="myItemId" value="util" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -310,7 +365,37 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="callnotes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="receiver" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AfterCallNotes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AfterCallNotes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="callnotes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="activity" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -321,14 +406,14 @@
   <component name="PropertiesComponent">
     <property name="project.structure.last.edited" value="Modules" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="252" />
-    <property name="OverrideImplement.combined" value="true" />
-    <property name="project.structure.proportion" value="0.15" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="267" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="OverrideImplement.combined" value="true" />
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="MemberChooser.sorted" value="false" />
-    <property name="recentsLimit" value="5" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="253" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
+    <property name="recentsLimit" value="5" />
+    <property name="MemberChooser.sorted" value="false" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
     <property name="last_opened_file_path" value="$USER_HOME$/Downloads/romannurik-code/misc/donediscard" />
     <property name="UI_DESIGNER_EDITOR_MODE.PaletteToolWindowManager.WIDTH" value="242" />
@@ -342,16 +427,16 @@
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_AVD" value="android-17" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder3" value="3" />
     <property name="OverrideImplement.overriding.sorted" value="false" />
-    <property name="FullScreen" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
+    <property name="FullScreen" value="false" />
     <property name="GoToClass.includeLibraries" value="false" />
     <property name="options.splitter.details.proportions" value="0.2" />
-    <property name="GoToFile.includeJavaFiles" value="false" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder0" value="0" />
+    <property name="GoToFile.includeJavaFiles" value="false" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder1" value="1" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
-    <property name="options.lastSelected" value="appearance" />
+    <property name="options.lastSelected" value="editor.preferences.completion" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="noserial-/dev/bus/usb/001/005" />
     <property name="MemberChooser.copyJavadoc" value="false" />
@@ -360,11 +445,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/libs" />
-      <recent name="$PROJECT_DIR$/res/drawable-hdpi" />
       <recent name="$PROJECT_DIR$/res/drawable" />
-      <recent name="$PROJECT_DIR$/res/drawable-mdpi" />
       <recent name="$PROJECT_DIR$/res/drawable-xhdpi" />
+      <recent name="$PROJECT_DIR$/res/drawable-mdpi" />
+      <recent name="$PROJECT_DIR$/res/drawable-hdpi" />
+      <recent name="$PROJECT_DIR$/libs" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.mkrstic.callnotes" />
@@ -548,7 +633,11 @@
       <created>1373048676738</created>
       <updated>1373048676738</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Changed calendar_id to 1 for Android 4.0+">
+      <created>1373054686461</created>
+      <updated>1373054686461</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -580,25 +669,25 @@
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26923078" sideWeight="0.66345125" order="6" side_tool="false" content_ui="tabs" x="-1" y="-3" width="1922" height="1084" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32690248" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33654878" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32941177" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3386924" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33654878" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33654878" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290461" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2497332" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924226" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18196371" sideWeight="0.66130763" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18196371" sideWeight="0.66345125" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3215434" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32959402" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" x="165" y="152" width="1722" height="854" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32690248" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39977852" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -644,7 +733,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed calendar_id to 1" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed calendar_id to 1 for Android 4.0+" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -661,110 +750,142 @@
     <MESSAGE value="x" />
     <MESSAGE value="Added CreateNoteActivity" />
     <MESSAGE value="Changed calendar_id to 1" />
+    <MESSAGE value="Changed calendar_id to 1 for Android 4.0+" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/mkrstic/callnotes/receiver/MyPhoneStateListener.java">
+    <entry file="file://$PROJECT_DIR$/res/layout/actionbar_custom_view_done.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="62" selection-start="1243" selection-end="1265" vertical-scroll-proportion="0.02094818" vertical-offset="684" max-vertical-offset="1786">
+        <state line="47" column="40" selection-start="1848" selection-end="1848" vertical-scroll-proportion="0.5681818" vertical-offset="393" max-vertical-offset="1273">
           <folding />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="64" selection-start="963" selection-end="963" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="513">
-          <folding />
-        </state>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/mkrstic/callnotes/activity/LauncherActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="26" selection-start="204" selection-end="204" vertical-scroll-proportion="0.1047409" vertical-offset="0" max-vertical-offset="907">
+        <state line="14" column="66" selection-start="427" selection-end="427" vertical-scroll-proportion="0.2939189" vertical-offset="16" max-vertical-offset="608">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../actionbarsherlock/README.md">
+    <entry file="file://$PROJECT_DIR$/src/com/mkrstic/callnotes/model/RecordingListener.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="589" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../actionbarsherlock/project.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="589" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../actionbarsherlock/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="576">
+        <state line="7" column="9" selection-start="125" selection-end="125" vertical-scroll-proportion="0.22466215" vertical-offset="0" max-vertical-offset="592">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../actionbarsherlock/pom.xml">
+    <entry file="file://$PROJECT_DIR$/res/layout/activity_create_note.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="19" selection-start="384" selection-end="391" vertical-scroll-proportion="0.2638889" vertical-offset="0" max-vertical-offset="2717" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="65" selection-start="1729" selection-end="1729" vertical-scroll-proportion="0.9492386" vertical-offset="123" max-vertical-offset="1216">
+        <state line="12" column="39" selection-start="543" selection-end="543" vertical-scroll-proportion="0.40282685" vertical-offset="0" max-vertical-offset="798">
           <folding />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Apps/adt-bundle-linux-x86_64-20130522/sdk/sources/android-17/android/provider/CalendarContract.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1044" column="66" selection-start="41911" selection-end="41924" vertical-scroll-proportion="0.33333334" vertical-offset="18993" max-vertical-offset="49020" />
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Apps/adt-bundle-linux-x86_64-20130522/sdk/sources/android-17/android/content/ContentResolver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="393" column="0" selection-start="16886" selection-end="16886" vertical-scroll-proportion="0.33333334" vertical-offset="6320" max-vertical-offset="35872">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Apps/adt-bundle-linux-x86_64-20130522/sdk/sources/android-17/android/content/CursorLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="0" selection-start="1706" selection-end="1706" vertical-scroll-proportion="0.33333334" vertical-offset="183" max-vertical-offset="4389" />
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Apps/adt-bundle-linux-x86_64-20130522/sdk/sources/android-17/android/content/AsyncTaskLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="300" column="0" selection-start="11396" selection-end="11396" vertical-scroll-proportion="0.33333334" vertical-offset="5066" max-vertical-offset="6631" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/activity_after_call.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/dialog_recording.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2850">
+        <state line="19" column="13" selection-start="744" selection-end="744" vertical-scroll-proportion="0.53710246" vertical-offset="57" max-vertical-offset="1102">
+          <folding>
+            <element signature="e#1219#1238#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Apps/adt-bundle-linux-x86_64-20130522/sdk/sources/android-17/android/app/Activity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="761" column="18" selection-start="36530" selection-end="36530" vertical-scroll-proportion="0.33277026" vertical-offset="12742" max-vertical-offset="99313">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/activity_after_call.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="8" selection-start="695" selection-end="695" vertical-scroll-proportion="0.3409894" vertical-offset="111" max-vertical-offset="2945">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mkrstic/callnotes/AfterCallNotesApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="13" selection-start="219" selection-end="219" vertical-scroll-proportion="-0.12331081" vertical-offset="187" max-vertical-offset="779">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mkrstic/callnotes/receiver/PhoneStateReceiver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="56" selection-start="434" selection-end="440" vertical-scroll-proportion="0.25675675" vertical-offset="0" max-vertical-offset="592">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/mkrstic/callnotes/activity/CreateNoteActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="78" column="5" selection-start="2733" selection-end="2733" vertical-scroll-proportion="0.0" vertical-offset="691" max-vertical-offset="1824">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mkrstic/callnotes/util/CalendarHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="17" selection-start="1189" selection-end="1189" vertical-scroll-proportion="38.0" vertical-offset="627" max-vertical-offset="2489">
-          <folding />
+        <state line="121" column="39" selection-start="4201" selection-end="4201" vertical-scroll-proportion="0.3614865" vertical-offset="2085" max-vertical-offset="3724">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/mkrstic/callnotes/activity/AfterCallActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="106" column="67" selection-start="3964" selection-end="3964" vertical-scroll-proportion="0.34917128" vertical-offset="1299" max-vertical-offset="2204">
+        <state line="68" column="32" selection-start="2001" selection-end="2001" vertical-scroll-proportion="-0.7483108" vertical-offset="1317" max-vertical-offset="2394">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mkrstic/callnotes/activity/RecordingDialog.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="46" column="41" selection-start="1593" selection-end="1593" vertical-scroll-proportion="0.42905405" vertical-offset="620" max-vertical-offset="2356">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mkrstic/callnotes/util/RecordingHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="40" column="28" selection-start="1247" selection-end="1247" vertical-scroll-proportion="0.6148649" vertical-offset="225" max-vertical-offset="2052">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mkrstic/callnotes/receiver/MyPhoneStateListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="83" column="5" selection-start="1300" selection-end="2881" vertical-scroll-proportion="0.0" vertical-offset="890" max-vertical-offset="1539">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="56" column="71" selection-start="2436" selection-end="2447" vertical-scroll-proportion="0.0" vertical-offset="681" max-vertical-offset="1273">
+          <folding>
+            <element signature="e#1101#1119#0" expanded="true" />
+            <element signature="e#1271#1304#0" expanded="true" />
+            <element signature="e#1694#1729#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mkrstic/callnotes/receiver/CallReceiver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="16" selection-start="844" selection-end="844" vertical-scroll-proportion="-0.7972973" vertical-offset="776" max-vertical-offset="1938">
           <folding />
         </state>
       </provider>
