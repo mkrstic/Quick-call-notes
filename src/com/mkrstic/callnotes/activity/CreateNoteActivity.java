@@ -2,8 +2,6 @@ package com.mkrstic.callnotes.activity;
 
 
 import android.content.Context;
-import android.media.MediaPlayer;
-import android.media.MediaRecorder;
 import android.os.AsyncTask;
 import android.os.Bundle;
 
@@ -13,6 +11,8 @@ import android.support.v4.app.FragmentTransaction;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -26,11 +26,10 @@ import com.actionbarsherlock.view.MenuItem;
 import com.mkrstic.callnotes.R;
 import com.mkrstic.callnotes.model.CallInfo;
 import com.mkrstic.callnotes.model.RecordingListener;
-import com.mkrstic.callnotes.util.CalendarHelper;
-import com.mkrstic.callnotes.util.RecordingHelper;
+import com.mkrstic.callnotes.mock.CalendarHelper;
+import com.mkrstic.callnotes.mock.RecordingHelper;
 
 import java.io.File;
-import java.io.IOException;
 
 
 /**
@@ -40,10 +39,12 @@ public class CreateNoteActivity extends SherlockFragmentActivity implements View
 
     private CallInfo mCallInfo;
     private EditText noteEditText;
-    private String LOGTAG = CreateNoteActivity.class.getName();
-    private ImageView removeRecordingBtn;
+    private String LOGTAG = "CreateNoteActivity";
+    private ImageView recordingRemoveBtn;
     private TextView recordingInfoTxt;
     private String recordedFile;
+
+    private static final String KEY_RECORDED_FILE = "CreateNoteActivity_recorded_file";
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -51,12 +52,19 @@ public class CreateNoteActivity extends SherlockFragmentActivity implements View
         setupActionBar();
         mCallInfo = (CallInfo) getIntent().getSerializableExtra(AfterCallActivity.EXTRA_CALL);
         if (mCallInfo == null) {
-            Toast.makeText(CreateNoteActivity.this, "Error. Call info not found", Toast.LENGTH_SHORT).show();
             finish();
         }
         bindViews();
+        if (savedInstanceState != null) {
+            onRecordingFinished(savedInstanceState.getString(KEY_RECORDED_FILE));
+        }
     }
 
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putString(KEY_RECORDED_FILE, recordedFile);
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -68,6 +76,7 @@ public class CreateNoteActivity extends SherlockFragmentActivity implements View
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.createnote_menuitem_discard:
+                deleteRecording();
                 finish();
                 return true;
             case R.id.createnote_menuitem_record:
@@ -92,12 +101,18 @@ public class CreateNoteActivity extends SherlockFragmentActivity implements View
 
     @Override
     public void onRecordingFinished(String filename) {
-        recordedFile = filename;
-        removeRecordingBtn.setVisibility(View.VISIBLE);
-        String shortName = "Audio message added";//filename.substring(filename.lastIndexOf("/"));
-        recordingInfoTxt.setText(shortName);
+        if (filename == null) {
+            Log.i(LOGTAG, "Filename is null");
+            return;
+        }
+        recordingRemoveBtn.setVisibility(View.VISIBLE);
         recordingInfoTxt.setVisibility(View.VISIBLE);
-        RecordingHelper.startPlaying(filename);
+        Animation slideAnim = AnimationUtils.makeInAnimation(CreateNoteActivity.this, false);
+        int animMediumDuration = 400;
+        slideAnim.setDuration(animMediumDuration);
+        recordingRemoveBtn.startAnimation(slideAnim);
+        recordingInfoTxt.startAnimation(slideAnim);
+        recordedFile = filename;
 
     }
 
@@ -106,7 +121,7 @@ public class CreateNoteActivity extends SherlockFragmentActivity implements View
         LayoutInflater inflater = (LayoutInflater) actionBar.getThemedContext().getSystemService(LAYOUT_INFLATER_SERVICE);
         final View customActionBarView = inflater.inflate(
                 R.layout.actionbar_custom_view_done, null);
-        customActionBarView.findViewById(R.id.actionbar_done).setOnClickListener(this);
+        customActionBarView.findViewById(R.id.actionbar_done).setOnClickListener(CreateNoteActivity.this);
 
         // Show the custom action bar view and hide the normal Home icon and title.
 
@@ -119,7 +134,7 @@ public class CreateNoteActivity extends SherlockFragmentActivity implements View
     private void addNote() {
         String note = noteEditText.getText().toString().trim();
         if (recordedFile != null) {
-            note += "\nRecording:\nfile://" + recordedFile;
+            note += "http:/" + recordedFile;
         }
         mCallInfo.setNote(note);
         new AddNoteTask().execute(mCallInfo);
@@ -128,14 +143,35 @@ public class CreateNoteActivity extends SherlockFragmentActivity implements View
 
     private void deleteRecording() {
         if (recordedFile == null) {
-            throw new NullPointerException("Recording file is null.");
+            //throw new NullPointerException("Recording file is null.");
+            return;
         }
-        File file = new File(recordedFile);
-        boolean deleted = file.delete();
+        boolean deleted = RecordingHelper.removeRecording(recordedFile);
         if (deleted) {
             recordedFile = null;
-            recordingInfoTxt.setVisibility(View.GONE);
-            removeRecordingBtn.setVisibility(View.GONE);
+            Animation slideAnim = AnimationUtils.makeOutAnimation(CreateNoteActivity.this, true);
+            int animMediumDuration = 150;
+            slideAnim.setDuration(animMediumDuration);
+            slideAnim.setAnimationListener(new Animation.AnimationListener() {
+                @Override
+                public void onAnimationStart(Animation animation) {
+
+                }
+
+                @Override
+                public void onAnimationEnd(Animation animation) {
+                    recordingInfoTxt.setVisibility(View.GONE);
+                    recordingRemoveBtn.setVisibility(View.GONE);
+                }
+
+                @Override
+                public void onAnimationRepeat(Animation animation) {
+
+                }
+            });
+            recordingRemoveBtn.startAnimation(slideAnim);
+            recordingInfoTxt.startAnimation(slideAnim);
+
         } else {
             Toast.makeText(CreateNoteActivity.this, "Error! File not removed", Toast.LENGTH_SHORT).show();
         }
@@ -164,9 +200,9 @@ public class CreateNoteActivity extends SherlockFragmentActivity implements View
         noteEditText = (EditText) findViewById(R.id.createnote_edittext_note);
         recordingInfoTxt = (TextView) findViewById(R.id.createnote_txt_recording_msg);
         recordingInfoTxt.setVisibility(View.GONE);
-        removeRecordingBtn = (ImageView) findViewById(R.id.createnote_imageview_delete_recording);
-        removeRecordingBtn.setOnClickListener(this);
-        removeRecordingBtn.setVisibility(View.GONE);
+        recordingRemoveBtn = (ImageView) findViewById(R.id.createnote_imageview_delete_recording);
+        recordingRemoveBtn.setOnClickListener(this);
+        recordingRemoveBtn.setVisibility(View.GONE);
     }
 
     class AddNoteTask extends AsyncTask<CallInfo, Void, Integer> {

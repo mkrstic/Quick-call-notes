@@ -21,19 +21,4 @@ public class AfterCallNotesApplication
     }
 
 
-    public String getHomeDir() {
-        if (homeDir == null) {
-            homeDir = Environment.getExternalStorageDirectory().getAbsolutePath() + "/" + getString(R.string.app_folder_name) + "/";
-        }
-        return homeDir;
-    }
-
-    public String getAudioDir() {
-        if (audioDir == null) {
-            audioDir = getHomeDir()+"/audio/";
-        }
-        return audioDir;
-    }
-
-
 }

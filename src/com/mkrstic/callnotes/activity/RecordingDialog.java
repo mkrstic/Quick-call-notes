@@ -1,6 +1,8 @@
 package com.mkrstic.callnotes.activity;
 
+import android.content.DialogInterface;
 import android.os.Bundle;
+import android.os.SystemClock;
 import android.support.v4.app.DialogFragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,7 +13,7 @@ import android.widget.Chronometer;
 import com.mkrstic.callnotes.R;
 import com.mkrstic.callnotes.model.CallInfo;
 import com.mkrstic.callnotes.model.RecordingListener;
-import com.mkrstic.callnotes.util.RecordingHelper;
+import com.mkrstic.callnotes.mock.RecordingHelper;
 
 /**
  * Created by mladen on 7/6/13.
@@ -45,6 +47,7 @@ public class RecordingDialog extends DialogFragment implements View.OnClickListe
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         getDialog().setTitle("Record note");
+        getDialog().getWindow().getAttributes().windowAnimations = R.style.SlideUpDown;
         View layout = inflater.inflate(R.layout.dialog_recording, container);
         bindViews(layout);
         return layout;
@@ -77,32 +80,41 @@ public class RecordingDialog extends DialogFragment implements View.OnClickListe
     public void onClick(View v) {
         if (v.getId() == R.id.recording_btn_stop) {
             if (hasBeenPaused) {
-                resumeRecording();
+                restartRecording();
             } else {
                 isSavePressed = true;
-                recordingListener.onRecordingFinished(recordingHelper.getRecordedFilepath());
                 dismiss();
             }
         }
     }
 
+    @Override
+    public void onDismiss(DialogInterface dialog) {
+        super.onDismiss(dialog);
+        if (isSavePressed) {
+            recordingListener.onRecordingFinished(recordingHelper.getRecordedFilepath());
+        }
+    }
+
     private void startRecording() {
         recordingHelper.startNewRecording();
-        //durationChronometer.setBase(0);
         durationChronometer.start();
         hasBeenPaused = false;
     }
     private void pauseRecording() {
-        recordingHelper.pauseRecording();
+        recordingHelper.stopRecording();
         durationChronometer.stop();
         hasBeenPaused = true;
-        stopBtn.setText(getString(R.string.action_resume));
+        stopBtn.setText(getString(R.string.action_restart));
     }
 
-    private void resumeRecording() {
-        recordingHelper.resumeRecording();
+    private void restartRecording() {
+        recordingHelper.discardRecording();
+        recordingHelper.startNewRecording();
+        durationChronometer.setBase(SystemClock.elapsedRealtime());
         durationChronometer.start();
         stopBtn.setText(getString(R.string.action_done));
+        hasBeenPaused = false;
     }
 
 

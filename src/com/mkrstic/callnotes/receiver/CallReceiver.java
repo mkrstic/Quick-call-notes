@@ -18,6 +18,7 @@ import com.mkrstic.callnotes.model.CallInfo;
  * Created by mladen on 7/6/13.
  */
 public class CallReceiver extends BroadcastReceiver {
+
     private Context mContext;
     private Intent mIntent;
     private static String prevStateStr;
@@ -61,7 +62,7 @@ public class CallReceiver extends BroadcastReceiver {
             if (prevState == TelephonyManager.CALL_STATE_OFFHOOK && curState == TelephonyManager.CALL_STATE_IDLE) {
                 Log.i(LOGTAG, "Starting handler...");
                 Handler handler = new Handler();
-                handler.postDelayed(new StartAfterCallActivity(), 340);
+                handler.postDelayed(new StartAfterCallActivity(), 300);
             } else {
                 Log.i(LOGTAG, "Nema potrebe za pokretanjem.");
             }
@@ -73,12 +74,12 @@ public class CallReceiver extends BroadcastReceiver {
         public void run() {
             final CallInfo lastCallInfo = findLastCall();
             if (lastCallInfo == null || lastCallInfo.getType() == CallLog.Calls.MISSED_TYPE) {
-                Log.i(LOGTAG, "Last call not found");
+                Log.i(LOGTAG, "Last call not found or type is missed");
                 return;
             }
             Log.i(LOGTAG, "Last call =" + lastCallInfo);
             Intent intent = new Intent(mContext, AfterCallActivity.class);
-            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             intent.putExtra(AfterCallActivity.EXTRA_CALL, lastCallInfo);
             mContext.startActivity(intent);
         }

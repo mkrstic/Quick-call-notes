@@ -69,7 +69,6 @@ public class AfterCallActivity extends Activity implements View.OnClickListener 
         mCallInfo = (CallInfo) intent.getSerializableExtra(EXTRA_CALL);
         if (mCallInfo == null) {
             Log.i("AfterCallActivity", "Call info is null!!");
-            Toast.makeText(AfterCallActivity.this, "Error. Call info not found", Toast.LENGTH_SHORT).show();
             finish();
         }
         populateViews(mCallInfo);
@@ -96,9 +95,10 @@ public class AfterCallActivity extends Activity implements View.OnClickListener 
         timeTxtView = (TextView) findViewById(R.id.aftercall_txt_time);
         imageProgressBar = (ProgressBar) findViewById(R.id.aftercall_progressbar_contact);
         btnDiscard = (Button) findViewById(R.id.aftercall_btn_discard);
+        btnDiscard.setOnClickListener(this);
         btnCreateNote = (Button) findViewById(R.id.aftercall_btn_new);
         btnCreateNote.setOnClickListener(this);
-        btnDiscard.setOnClickListener(this);
+
     }
 
     class AddContactThumbTask extends AsyncTask<String, Void, Bitmap> {

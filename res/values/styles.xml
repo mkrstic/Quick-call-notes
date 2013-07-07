@@ -1,11 +1,11 @@
 <resources>
 
-    <style name="AppTheme" parent="@style/Theme.Sherlock.Light.DarkActionBar" />
-    <color name="black">#FF000000</color>
+    <style name="AppTheme" parent="@style/Theme.Sherlock" />
     <color name="whitegrey">#FFF2F2F2</color>
-    <style name="LightDialog" parent="@android:style/Theme.Dialog">
-        <item name="@android:background">@color/whitegrey</item>
-        <item name="@android:textColor">@color/black</item>
+    <style name="SlideUpDown">
+        <item name="android:windowEnterAnimation">@anim/slide_down</item>
+        <item name="android:windowExitAnimation">@anim/slide_up</item>
     </style>
+
 
 </resources>

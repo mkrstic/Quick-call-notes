@@ -1,4 +1,4 @@
-package com.mkrstic.callnotes.com.mkrstic.callnotes.view;
+package com.mkrstic.callnotes.view;
 
 import android.content.Context;
 import android.content.res.TypedArray;

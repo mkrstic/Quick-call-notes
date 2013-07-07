@@ -10,8 +10,9 @@
             android:layout_height="48dp"
             android:layout_alignParentLeft="true"
             android:gravity="center_vertical"
-            android:text="Audio message recorded"
-            android:background="#80FF80"
+            android:text="Audio message attached"
+            android:background="#ff6ef847"
+            android:textColor="@android:color/background_dark"
             android:drawableLeft="@drawable/ic_info"
             />
     <ImageView android:id="@+id/createnote_imageview_delete_recording"

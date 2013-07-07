@@ -30,7 +30,10 @@ public class RecordingHelper {
     private MediaRecorder recorder = null;
 
 //    private MediaPlayer player = null;
-
+    public static boolean removeRecording(String filePath) {
+        File file = new File(filePath);
+        return file.delete();
+    }
 
     public RecordingHelper(final Context context, final CallInfo callInfo) {
         String appDirStr = Environment.getExternalStorageDirectory().getAbsolutePath() + "/" + context.getApplicationInfo().packageName;
@@ -68,20 +71,6 @@ public class RecordingHelper {
         }
     }
 
-    public void pauseRecording() {
-        if (recorder == null) {
-            throw new NullPointerException("Recorder is null");
-        }
-        recorder.stop();
-    }
-
-    public void resumeRecording() {
-        if (recorder == null) {
-            throw new NullPointerException("Recorder is null");
-        }
-        recorder.start();
-    }
-
     public void discardRecording() {
         if (recorder != null) {
             stopRecording();
@@ -89,6 +78,7 @@ public class RecordingHelper {
         File file = new File(filePath);
         file.delete();
     }
+
 
     public String getRecordedFilepath() {
         return filePath;
