@@ -46,7 +46,7 @@
             android:id="@+id/recording_btn_stop"
             android:layout_alignLeft="@+id/recording_chronometer_duration"
             android:layout_alignBottom="@+id/recording_imageview_record"
-            android:drawableLeft="@drawable/ic_action_done_holo_light"
+            android:drawableLeft="@drawable/ic_action_done_holo_dark"
             android:drawablePadding="5dp"
             android:minHeight="48dp"
             android:minWidth="70dp"

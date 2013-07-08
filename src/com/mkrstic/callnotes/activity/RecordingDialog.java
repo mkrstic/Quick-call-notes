@@ -13,7 +13,8 @@ import android.widget.Chronometer;
 import com.mkrstic.callnotes.R;
 import com.mkrstic.callnotes.model.CallInfo;
 import com.mkrstic.callnotes.model.RecordingListener;
-import com.mkrstic.callnotes.mock.RecordingHelper;
+import com.mkrstic.callnotes.util.RecordingHelper;
+
 
 /**
  * Created by mladen on 7/6/13.

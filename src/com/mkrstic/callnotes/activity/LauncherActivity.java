@@ -14,7 +14,7 @@ public class LauncherActivity extends Activity {
         super.onCreate(savedInstanceState);
         Intent intent = new Intent(this, AfterCallActivity.class);
         intent.putExtra(AfterCallActivity.EXTRA_CALL, mockReadCallExtra());
-        startActivity(intent);
+        //startActivity(intent);
         finish();
     }
 

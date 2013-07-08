@@ -4,7 +4,6 @@ package com.mkrstic.callnotes.activity;
 import android.content.Context;
 import android.os.AsyncTask;
 import android.os.Bundle;
-
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
@@ -19,17 +18,16 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.actionbarsherlock.app.ActionBar;
-
 import com.actionbarsherlock.app.SherlockFragmentActivity;
 import com.actionbarsherlock.view.Menu;
 import com.actionbarsherlock.view.MenuItem;
+
 import com.mkrstic.callnotes.R;
+
 import com.mkrstic.callnotes.model.CallInfo;
 import com.mkrstic.callnotes.model.RecordingListener;
-import com.mkrstic.callnotes.mock.CalendarHelper;
-import com.mkrstic.callnotes.mock.RecordingHelper;
-
-import java.io.File;
+import com.mkrstic.callnotes.util.CalendarHelper;
+import com.mkrstic.callnotes.util.RecordingHelper;
 
 
 /**
@@ -107,11 +105,11 @@ public class CreateNoteActivity extends SherlockFragmentActivity implements View
         }
         recordingRemoveBtn.setVisibility(View.VISIBLE);
         recordingInfoTxt.setVisibility(View.VISIBLE);
-        Animation slideAnim = AnimationUtils.makeInAnimation(CreateNoteActivity.this, false);
+        /*Animation slideAnim = AnimationUtils.makeInAnimation(CreateNoteActivity.this, false);
         int animMediumDuration = 400;
         slideAnim.setDuration(animMediumDuration);
         recordingRemoveBtn.startAnimation(slideAnim);
-        recordingInfoTxt.startAnimation(slideAnim);
+        recordingInfoTxt.startAnimation(slideAnim);*/
         recordedFile = filename;
 
     }
@@ -150,7 +148,7 @@ public class CreateNoteActivity extends SherlockFragmentActivity implements View
         if (deleted) {
             recordedFile = null;
             Animation slideAnim = AnimationUtils.makeOutAnimation(CreateNoteActivity.this, true);
-            int animMediumDuration = 150;
+            int animMediumDuration = 300;
             slideAnim.setDuration(animMediumDuration);
             slideAnim.setAnimationListener(new Animation.AnimationListener() {
                 @Override
