@@ -50,75 +50,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8f0356a8-e396-40c3-a81e-fca7231f8cbd" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mkrstic/callnotes/mock/ContactHelper.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mkrstic/callnotes/util/SoundMeterView.java" />
-      <change type="DELETED" beforePath="C:\Users\Mladen\Documents\Quick-call-notes\.classpath" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Mladen\Documents\Quick-call-notes\.project" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Mladen\Documents\Quick-call-notes\.settings\org.eclipse.jdt.core.prefs" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Mladen\Documents\Quick-call-notes\bin\AfterCallNotes.apk" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Mladen\Documents\Quick-call-notes\bin\AndroidManifest.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Mladen\Documents\Quick-call-notes\bin\R.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Mladen\Documents\Quick-call-notes\bin\classes.dex" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Mladen\Documents\Quick-call-notes\bin\classes\com\mkrstic\callnotes\AfterCallNotesApplication.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Mladen\Documents\Quick-call-notes\bin\classes\com\mkrstic\callnotes\BuildConfig.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Mladen\Documents\Quick-call-notes\bin\classes\com\mkrstic\callnotes\R$anim.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Mladen\Documents\Quick-call-notes\bin\classes\com\mkrstic\callnotes\R$array.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Mladen\Documents\Quick-call-notes\bin\classes\com\mkrstic\callnotes\R$attr.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Mladen\Documents\Quick-call-notes\bin\classes\com\mkrstic\callnotes\R$color.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Mladen\Documents\Quick-call-notes\bin\classes\com\mkrstic\callnotes\R$dimen.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Mladen\Documents\Quick-call-notes\bin\classes\com\mkrstic\callnotes\R$drawable.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Mladen\Documents\Quick-call-notes\bin\classes\com\mkrstic\callnotes\R$id.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Mladen\Documents\Quick-call-notes\bin\classes\com\mkrstic\callnotes\R$layout.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Mladen\Documents\Quick-call-notes\bin\classes\com\mkrstic\callnotes\R$menu.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Mladen\Documents\Quick-call-notes\bin\classes\com\mkrstic\callnotes\R$string.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Mladen\Documents\Quick-call-notes\bin\classes\com\mkrstic\callnotes\R$style.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Mladen\Documents\Quick-call-notes\bin\classes\com\mkrstic\callnotes\R.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Mladen\Documents\Quick-call-notes\bin\classes\com\mkrstic\callnotes\activity\AfterCallActivity$AddContactThumbTask.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Mladen\Documents\Quick-call-notes\bin\classes\com\mkrstic\callnotes\activity\AfterCallActivity.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Mladen\Documents\Quick-call-notes\bin\classes\com\mkrstic\callnotes\activity\MainActivity.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Mladen\Documents\Quick-call-notes\bin\classes\com\mkrstic\callnotes\model\Call.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Mladen\Documents\Quick-call-notes\bin\classes\com\mkrstic\callnotes\receiver\IncomingCallReceiver.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Mladen\Documents\Quick-call-notes\bin\classes\com\mkrstic\callnotes\receiver\MyPhoneStateListener$StartAfterCallActivity.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Mladen\Documents\Quick-call-notes\bin\classes\com\mkrstic\callnotes\receiver\MyPhoneStateListener.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Mladen\Documents\Quick-call-notes\bin\classes\com\mkrstic\util\QuickContactHelper.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Mladen\Documents\Quick-call-notes\bin\classes\org\mariotaku\actionbarcompat\R$anim.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Mladen\Documents\Quick-call-notes\bin\classes\org\mariotaku\actionbarcompat\R$attr.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Mladen\Documents\Quick-call-notes\bin\classes\org\mariotaku\actionbarcompat\R$color.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Mladen\Documents\Quick-call-notes\bin\classes\org\mariotaku\actionbarcompat\R$dimen.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Mladen\Documents\Quick-call-notes\bin\classes\org\mariotaku\actionbarcompat\R$drawable.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Mladen\Documents\Quick-call-notes\bin\classes\org\mariotaku\actionbarcompat\R$id.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Mladen\Documents\Quick-call-notes\bin\classes\org\mariotaku\actionbarcompat\R$layout.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Mladen\Documents\Quick-call-notes\bin\classes\org\mariotaku\actionbarcompat\R$style.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Mladen\Documents\Quick-call-notes\bin\classes\org\mariotaku\actionbarcompat\R.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Mladen\Documents\Quick-call-notes\bin\dexedLibs\acra-4.4.0-02e32f2460ed7beb0ffe7a06cc89fb63.jar" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Mladen\Documents\Quick-call-notes\bin\dexedLibs\actionbarcompat-a6fb87a18f7f66098d995941d3d4456b.jar" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Mladen\Documents\Quick-call-notes\bin\dexedLibs\android-support-v4-d10ff1d150fedd26593ae639c0e6a761.jar" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Mladen\Documents\Quick-call-notes\bin\jarlist.cache" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Mladen\Documents\Quick-call-notes\bin\res\drawable-hdpi\content_event.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Mladen\Documents\Quick-call-notes\bin\res\drawable-hdpi\device_access_mic.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Mladen\Documents\Quick-call-notes\bin\res\drawable-hdpi\ic_action_search.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Mladen\Documents\Quick-call-notes\bin\res\drawable-hdpi\ic_launcher.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Mladen\Documents\Quick-call-notes\bin\res\drawable-ldpi\ic_launcher.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Mladen\Documents\Quick-call-notes\bin\res\drawable-mdpi\content_event.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Mladen\Documents\Quick-call-notes\bin\res\drawable-mdpi\device_access_mic.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Mladen\Documents\Quick-call-notes\bin\res\drawable-mdpi\ic_action_search.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Mladen\Documents\Quick-call-notes\bin\res\drawable-mdpi\ic_launcher.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Mladen\Documents\Quick-call-notes\bin\res\drawable-xhdpi\content_event.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Mladen\Documents\Quick-call-notes\bin\res\drawable-xhdpi\device_access_mic.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Mladen\Documents\Quick-call-notes\bin\res\drawable-xhdpi\ic_action_search.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Mladen\Documents\Quick-call-notes\bin\res\drawable-xhdpi\ic_launcher.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Mladen\Documents\Quick-call-notes\bin\res\drawable\content_event.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Mladen\Documents\Quick-call-notes\bin\res\drawable\device_access_mic.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Mladen\Documents\Quick-call-notes\bin\res\drawable\social_person.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Mladen\Documents\Quick-call-notes\bin\res\drawable\unknown_contact.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Mladen\Documents\Quick-call-notes\bin\resources.ap_" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mkrstic/callnotes/activity/AfterCallActivity.java" afterPath="$PROJECT_DIR$/src/com/mkrstic/callnotes/activity/AfterCallActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mkrstic/callnotes/util/ContactHelper.java" afterPath="$PROJECT_DIR$/src/com/mkrstic/callnotes/util/ContactHelper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mkrstic/callnotes/activity/CreateNoteActivity.java" afterPath="$PROJECT_DIR$/src/com/mkrstic/callnotes/activity/CreateNoteActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mkrstic/callnotes/activity/LauncherActivity.java" afterPath="$PROJECT_DIR$/src/com/mkrstic/callnotes/activity/LauncherActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mkrstic/callnotes/util/RecordingHelper.java" afterPath="$PROJECT_DIR$/src/com/mkrstic/callnotes/util/RecordingHelper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/activity_after_call.xml" afterPath="$PROJECT_DIR$/res/layout/activity_after_call.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/screens/screen-1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/screens/screen-2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/screens/screen-3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/screens/screen-4.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="AfterCallNotes.iws" />
@@ -194,7 +130,7 @@
       <file leaf-file-name="README.md" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="104" selection-start="389" selection-end="389" vertical-scroll-proportion="0.33788395" vertical-offset="0" max-vertical-offset="586">
+            <state line="5" column="0" selection-start="267" selection-end="267" vertical-scroll-proportion="0.19197208" vertical-offset="0" max-vertical-offset="573">
               <folding />
             </state>
           </provider>
@@ -314,6 +250,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AfterCallNotes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Quick-call-notes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="screens" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -373,6 +323,7 @@
       <recent name="$PROJECT_DIR$/libs" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Mladen\Documents\Quick-call-notes\screens" />
       <recent name="C:\Users\Mladen\Documents\Quick-call-notes\res\drawable-hdpi" />
       <recent name="C:\Users\Mladen\Documents\Quick-call-notes\res\drawable-mdpi" />
       <recent name="C:\Users\Mladen\Documents\Quick-call-notes\res\drawable-xhdpi" />
@@ -571,7 +522,11 @@
       <created>1373292335216</created>
       <updated>1373292335216</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Added readme.">
+      <created>1373311755395</created>
+      <updated>1373311755395</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -667,7 +622,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Removed one anim" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added readme." />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -687,6 +642,7 @@
     <MESSAGE value="Changed calendar_id to 1 for Android 4.0+" />
     <MESSAGE value="Added slide animations." />
     <MESSAGE value="Removed one anim" />
+    <MESSAGE value="Added readme." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -810,7 +766,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="104" selection-start="389" selection-end="389" vertical-scroll-proportion="0.33788395" vertical-offset="0" max-vertical-offset="586">
+        <state line="5" column="0" selection-start="267" selection-end="267" vertical-scroll-proportion="0.19197208" vertical-offset="0" max-vertical-offset="573">
           <folding />
         </state>
       </provider>
