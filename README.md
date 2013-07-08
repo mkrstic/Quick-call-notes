@@ -2,8 +2,10 @@
 
 Simple app to take notes after a phone call.
 
-[Screen1](https://raw.github.com/mkrstic/Quick-call-notes/master/screens/screen-1.png)&nbsp;&nbsp;![Screen2](https://raw.github.com/mkrstic/Quick-call-notes/master/screens/screen-2.png)
-[Screen3](https://raw.github.com/mkrstic/Quick-call-notes/master/screens/screen-3.png)&nbsp;&nbsp;![Screen4](https://raw.github.com/mkrstic/Quick-call-notes/master/screens/screen-4.png)
+![Screen1](https://raw.github.com/mkrstic/Quick-call-notes/master/screens/screen-1.png)
+![Screen2](https://raw.github.com/mkrstic/Quick-call-notes/master/screens/screen-2.png)
+![Screen3](https://raw.github.com/mkrstic/Quick-call-notes/master/screens/screen-3.png)
+![Screen4](https://raw.github.com/mkrstic/Quick-call-notes/master/screens/screen-4.png)
 
 ## License and copyrights
 

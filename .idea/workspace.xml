@@ -50,10 +50,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8f0356a8-e396-40c3-a81e-fca7231f8cbd" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/screens/screen-1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/screens/screen-2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/screens/screen-3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/screens/screen-4.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -130,7 +126,7 @@
       <file leaf-file-name="README.md" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="0" selection-start="267" selection-end="267" vertical-scroll-proportion="0.19197208" vertical-offset="0" max-vertical-offset="573">
+            <state line="5" column="77" selection-start="246" selection-end="246" vertical-scroll-proportion="0.18771331" vertical-offset="0" max-vertical-offset="586">
               <folding />
             </state>
           </provider>
@@ -526,7 +522,11 @@
       <created>1373311755395</created>
       <updated>1373311755395</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Screenshots added">
+      <created>1373312097399</created>
+      <updated>1373312097399</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -622,7 +622,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added readme." />
+    <option name="LAST_COMMIT_MESSAGE" value="Screenshots added" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -643,6 +643,7 @@
     <MESSAGE value="Added slide animations." />
     <MESSAGE value="Removed one anim" />
     <MESSAGE value="Added readme." />
+    <MESSAGE value="Screenshots added" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -766,7 +767,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="0" selection-start="267" selection-end="267" vertical-scroll-proportion="0.19197208" vertical-offset="0" max-vertical-offset="573">
+        <state line="5" column="77" selection-start="246" selection-end="246" vertical-scroll-proportion="0.18771331" vertical-offset="0" max-vertical-offset="586">
           <folding />
         </state>
       </provider>
