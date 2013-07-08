@@ -126,7 +126,7 @@
       <file leaf-file-name="README.md" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="77" selection-start="246" selection-end="246" vertical-scroll-proportion="0.18771331" vertical-offset="0" max-vertical-offset="586">
+            <state line="5" column="175" selection-start="432" selection-end="432" vertical-scroll-proportion="0.19197208" vertical-offset="0" max-vertical-offset="573">
               <folding />
             </state>
           </provider>
@@ -526,7 +526,11 @@
       <created>1373312097399</created>
       <updated>1373312097399</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Screenshots added">
+      <created>1373312233586</created>
+      <updated>1373312233586</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -767,7 +771,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="77" selection-start="246" selection-end="246" vertical-scroll-proportion="0.18771331" vertical-offset="0" max-vertical-offset="586">
+        <state line="5" column="175" selection-start="432" selection-end="432" vertical-scroll-proportion="0.19197208" vertical-offset="0" max-vertical-offset="573">
           <folding />
         </state>
       </provider>
