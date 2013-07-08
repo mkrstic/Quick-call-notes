@@ -2,6 +2,7 @@ package com.mkrstic.callnotes.activity;
 
 
 import android.content.Context;
+import android.content.pm.PackageManager;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -78,7 +79,12 @@ public class CreateNoteActivity extends SherlockFragmentActivity implements View
                 finish();
                 return true;
             case R.id.createnote_menuitem_record:
-                showRecordingDialog();
+                if (getPackageManager().hasSystemFeature(PackageManager.FEATURE_MICROPHONE)) {
+                    showRecordingDialog();
+                } else {
+                    Toast.makeText(CreateNoteActivity.this, "You must have a microphone to use this feature.", Toast.LENGTH_LONG).show();
+                }
+
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
@@ -218,7 +224,7 @@ public class CreateNoteActivity extends SherlockFragmentActivity implements View
         protected void onPostExecute(Integer eventId) {
             super.onPostExecute(eventId);
             if (eventId != null) {
-                Toast.makeText(CreateNoteActivity.this, "Note saved", Toast.LENGTH_SHORT).show();
+                Toast.makeText(CreateNoteActivity.this, "Note saved", Toast.LENGTH_LONG).show();
             }
         }
     }

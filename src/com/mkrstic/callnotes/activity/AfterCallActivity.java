@@ -15,7 +15,6 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.mkrstic.callnotes.R;
 import com.mkrstic.callnotes.model.CallInfo;
@@ -113,7 +112,7 @@ public class AfterCallActivity extends Activity implements View.OnClickListener 
         protected Bitmap doInBackground(String... params) {
             final String phoneNumber = params[0];
             ContactHelper contactHelper = new ContactHelper(AfterCallActivity.this);
-            Long contactId = contactHelper.fetchContactIdByPhone(phoneNumber);
+            Long contactId = contactHelper.fetchContact(phoneNumber);
             if (contactId != null) {
                 InputStream is = contactHelper.fetchPhoto(contactId);
                 if (is != null) {

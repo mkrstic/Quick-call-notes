@@ -19,27 +19,35 @@ import java.io.InputStream;
 public class ContactHelper {
     private final Context context;
     private String LOGTAG = "ContactHelper";
+    private Long contactId;
+    private String displayName;
+
 
     public ContactHelper(Context context) {
         this.context = context;
     }
 
-    public Long fetchContactIdByPhone(final String phoneNumber) {
-        try {
-            Uri uri = Uri.withAppendedPath(ContactsContract.PhoneLookup.CONTENT_FILTER_URI, Uri.encode(phoneNumber));
-            String[] projection = new String[]{ContactsContract.PhoneLookup.DISPLAY_NAME, ContactsContract.PhoneLookup._ID};
-            Cursor cursor = context.getContentResolver().query(uri, projection, null, null, null);
-            Long contactId = null;
-            if (cursor != null && cursor.moveToFirst()) {
-                //String contactName = cursor.getString(cursor.getColumnIndexOrThrow(ContactsContract.PhoneLookup.DISPLAY_NAME));
-                contactId = cursor.getLong(cursor.getColumnIndexOrThrow(ContactsContract.PhoneLookup._ID));
-            }
-            cursor.close();
-            return contactId;
-        } catch (Exception e) {
-            e.printStackTrace();
-            return null;
+    public Long fetchContact(final String phoneNumber) {
+        Uri uri = Uri.withAppendedPath(ContactsContract.PhoneLookup.CONTENT_FILTER_URI, Uri.encode(phoneNumber));
+        String[] projection = new String[]{ContactsContract.PhoneLookup._ID, ContactsContract.PhoneLookup.DISPLAY_NAME};
+        Cursor cursor = context.getContentResolver().query(uri, projection, null, null, null);
+        if (cursor != null && cursor.moveToFirst()) {
+            contactId = cursor.getLong(0);
+            displayName = cursor.getString(1);
         }
+        cursor.close();
+        return contactId;
+
+    }
+
+    public InputStream fetchPhoto(long contactId) {
+        InputStream is = openDisplayPhoto(contactId);
+        if (is == null) {
+            Log.i(LOGTAG, "Display photo not found");
+            is = openPhoto(contactId);
+            Log.i(LOGTAG, "Thumb photo " + (is == null ? "not " : "") + "found");
+        }
+        return is;
     }
 
     private InputStream openDisplayPhoto(long contactId) {
@@ -75,14 +83,13 @@ public class ContactHelper {
         return null;
     }
 
-    public InputStream fetchPhoto(long contactId) {
-        InputStream is = openDisplayPhoto(contactId);
-        if (is == null) {
-            Log.i(LOGTAG, "Display photo not found");
-            is = openPhoto(contactId);
-            Log.i(LOGTAG, "Thumb photo " + (is == null ? "not " : "") + "found");
-        }
-        return is;
+    public Long getContactId() {
+        return contactId;
+    }
+
+    public String getDisplayName() {
+        return displayName;
     }
 }
+
 

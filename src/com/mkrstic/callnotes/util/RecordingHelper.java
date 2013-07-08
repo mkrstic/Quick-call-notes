@@ -24,9 +24,10 @@ import java.io.IOException;
 
 
 public class RecordingHelper {
+    static final private double EMA_FILTER = 0.6;
 
+    private double EMA = 0.0;
     private final String filePath;
-
     private MediaRecorder recorder = null;
 
 //    private MediaPlayer player = null;
@@ -82,6 +83,21 @@ public class RecordingHelper {
 
     public String getRecordedFilepath() {
         return filePath;
+    }
+
+    public double getAmplitude() {
+        if (recorder == null) {
+            return 0;
+        }
+        // getMaxAmplitude interval [0, 32767]
+        return  recorder.getMaxAmplitude() /2700.0;
+
+    }
+
+    public double getAmplitudeEMA() {
+        double amp = getAmplitude();
+        EMA = EMA_FILTER * amp + (1.0 - EMA_FILTER) * EMA;
+        return EMA;
     }
 
     public static void startPlaying(String filePath) {

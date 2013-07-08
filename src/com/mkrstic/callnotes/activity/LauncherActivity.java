@@ -14,7 +14,7 @@ public class LauncherActivity extends Activity {
         super.onCreate(savedInstanceState);
         Intent intent = new Intent(this, AfterCallActivity.class);
         intent.putExtra(AfterCallActivity.EXTRA_CALL, mockReadCallExtra());
-        //startActivity(intent);
+        startActivity(intent);
         finish();
     }
 
@@ -22,10 +22,8 @@ public class LauncherActivity extends Activity {
         CallInfo callInfo = new CallInfo();
         callInfo.setDateTimeInMillis(System.currentTimeMillis());
         callInfo.setDurationInSeconds(1024);
-        callInfo.setContactName("Mladen");
-        callInfo.setNumber("+38166200229");
-        /*mCallInfo.setContactName("Ivana");
-        callInfo.setNumber("+381662021570");*/
+        callInfo.setContactName("Clemens Raphael");
+        callInfo.setNumber("(541) 754-3010");
         return callInfo;
     }
 }
