@@ -9,7 +9,6 @@ import android.os.Bundle;
 import android.text.TextUtils;
 
 import android.text.format.DateFormat;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -39,7 +38,7 @@ public class AfterCallActivity extends Activity implements View.OnClickListener 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_after_call);
+        setContentView(R.layout.dialog_after_call);
         bindViews();
         loadInfoFromIntent(getIntent());
     }
@@ -67,7 +66,6 @@ public class AfterCallActivity extends Activity implements View.OnClickListener 
     private void loadInfoFromIntent(final Intent intent) {
         mCallInfo = (CallInfo) intent.getSerializableExtra(EXTRA_CALL);
         if (mCallInfo == null) {
-            Log.i("AfterCallActivity", "Call info is null!!");
             finish();
         }
         populateViews(mCallInfo);

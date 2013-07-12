@@ -43,9 +43,7 @@ public class ContactHelper {
     public InputStream fetchPhoto(long contactId) {
         InputStream is = openDisplayPhoto(contactId);
         if (is == null) {
-            Log.i(LOGTAG, "Display photo not found");
             is = openPhoto(contactId);
-            Log.i(LOGTAG, "Thumb photo " + (is == null ? "not " : "") + "found");
         }
         return is;
     }

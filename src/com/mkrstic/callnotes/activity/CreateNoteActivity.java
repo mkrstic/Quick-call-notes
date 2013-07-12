@@ -4,6 +4,7 @@ package com.mkrstic.callnotes.activity;
 import android.content.Context;
 import android.content.pm.PackageManager;
 import android.os.AsyncTask;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -29,6 +30,7 @@ import com.mkrstic.callnotes.model.CallInfo;
 import com.mkrstic.callnotes.model.RecordingListener;
 import com.mkrstic.callnotes.util.CalendarHelper;
 import com.mkrstic.callnotes.util.RecordingHelper;
+import com.mkrstic.callnotes.util.SharedPrefsHelper;
 
 
 /**
@@ -79,12 +81,16 @@ public class CreateNoteActivity extends SherlockFragmentActivity implements View
                 finish();
                 return true;
             case R.id.createnote_menuitem_record:
-                if (getPackageManager().hasSystemFeature(PackageManager.FEATURE_MICROPHONE)) {
-                    showRecordingDialog();
+                if (hasMicrophone()) {
+                    boolean isSDPresent = android.os.Environment.getExternalStorageState().equals(android.os.Environment.MEDIA_MOUNTED);
+                    if (isSDPresent) {
+                        showRecordingDialog();
+                    } else {
+                        Toast.makeText(CreateNoteActivity.this, "You must have SD card mounted to use this feature.", Toast.LENGTH_LONG).show();
+                    }
                 } else {
                     Toast.makeText(CreateNoteActivity.this, "You must have a microphone to use this feature.", Toast.LENGTH_LONG).show();
                 }
-
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
@@ -111,13 +117,7 @@ public class CreateNoteActivity extends SherlockFragmentActivity implements View
         }
         recordingRemoveBtn.setVisibility(View.VISIBLE);
         recordingInfoTxt.setVisibility(View.VISIBLE);
-        /*Animation slideAnim = AnimationUtils.makeInAnimation(CreateNoteActivity.this, false);
-        int animMediumDuration = 400;
-        slideAnim.setDuration(animMediumDuration);
-        recordingRemoveBtn.startAnimation(slideAnim);
-        recordingInfoTxt.startAnimation(slideAnim);*/
         recordedFile = filename;
-
     }
 
     private void setupActionBar() {
@@ -136,11 +136,17 @@ public class CreateNoteActivity extends SherlockFragmentActivity implements View
         actionBar.setCustomView(customActionBarView);
     }
     private void addNote() {
-        String note = noteEditText.getText().toString().trim();
+        final String note = noteEditText.getText().toString().trim();
+        StringBuilder eventDesc = new StringBuilder("");
         if (recordedFile != null) {
-            note += "http:/" + recordedFile;
+            final SharedPrefsHelper sharedPrefsHelper = new SharedPrefsHelper(CreateNoteActivity.this);
+            long fileId = sharedPrefsHelper.putFile(recordedFile);
+            eventDesc.append("http://voice.my/");
+            eventDesc.append(fileId);
+            eventDesc.append('\n');
         }
-        mCallInfo.setNote(note);
+        eventDesc.append(note);
+        mCallInfo.setNote(eventDesc.toString());
         new AddNoteTask().execute(mCallInfo);
         finish();
     }
@@ -197,6 +203,14 @@ public class CreateNoteActivity extends SherlockFragmentActivity implements View
         RecordingDialog recordingDialog = RecordingDialog.newInstance(mCallInfo);
         recordingDialog.setRecordingListener(CreateNoteActivity.this);
         recordingDialog.show(fragmentManager, dialogTag);
+    }
+
+    private boolean hasMicrophone() {
+        int sdkVersion = Build.VERSION.SDK_INT;
+        if (sdkVersion > 7) {
+            return getPackageManager().hasSystemFeature(PackageManager.FEATURE_MICROPHONE);
+        }
+        return true; // pretpostavka da mikrofon postoji jer se ne moze proveriti
     }
 
 

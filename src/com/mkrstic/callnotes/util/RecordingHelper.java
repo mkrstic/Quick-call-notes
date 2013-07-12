@@ -30,7 +30,6 @@ public class RecordingHelper {
     private final String filePath;
     private MediaRecorder recorder = null;
 
-//    private MediaPlayer player = null;
     public static boolean removeRecording(String filePath) {
         File file = new File(filePath);
         return file.delete();
@@ -66,7 +65,6 @@ public class RecordingHelper {
         } catch (IllegalStateException ise) {
             ise.printStackTrace();
         } catch (NullPointerException npe) {
-            //TODO
         } finally {
             recorder = null;
         }
@@ -76,8 +74,7 @@ public class RecordingHelper {
         if (recorder != null) {
             stopRecording();
         }
-        File file = new File(filePath);
-        file.delete();
+        removeRecording(filePath);
     }
 
 
@@ -100,19 +97,7 @@ public class RecordingHelper {
         return EMA;
     }
 
-    public static void startPlaying(String filePath) {
-        MediaPlayer player = new MediaPlayer();
-        try {
-            player.setDataSource(filePath);
-            player.prepare();
-            player.start();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
 
-    /*public void stopPlaying() {
-        player.release();
-        player = null;
-    }*/
+
+
 }

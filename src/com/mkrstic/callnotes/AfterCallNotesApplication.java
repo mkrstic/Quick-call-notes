@@ -16,8 +16,9 @@ public class AfterCallNotesApplication
 
     @Override
     public void onCreate() {
-        //ACRA.init(this);
         super.onCreate();
+        //ACRA.init(this);
+
     }
 
 

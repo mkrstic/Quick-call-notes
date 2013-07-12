@@ -92,6 +92,10 @@ public class CalendarHelper {
     }
 
     private int getOrCreateAppCalendar() {
+        // TODO: Test this method
+        if (true) {
+            return 1;
+        }
         final String[] projection =  {CalendarContract.Calendars._ID};
         final String selection = "(" + CalendarContract.Calendars.NAME + " = ?" + ")";
         String calendarName = context.getString(R.string.app_name);

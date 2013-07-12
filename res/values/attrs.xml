@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <declare-styleable name="LinedEditText">
-        <attr name="lineColor" format="color"/>
-        <attr name="strokeWidth" format="dimension"/>
-    </declare-styleable>
+
     <declare-styleable name="MySlidingDrawer">
         <attr name="handle" format="reference" />
         <attr name="content" format="reference" />

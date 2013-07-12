@@ -79,7 +79,7 @@ public class RecordingDialog extends DialogFragment implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
-        if (v.getId() == R.id.recording_btn_stop) {
+        if (v.getId() == R.id.recording_btn_close) {
             if (hasBeenPaused) {
                 restartRecording();
             } else {
@@ -121,7 +121,7 @@ public class RecordingDialog extends DialogFragment implements View.OnClickListe
 
     private void bindViews(View layout) {
         durationChronometer = (Chronometer) layout.findViewById(R.id.recording_chronometer_duration);
-        stopBtn = (Button) layout.findViewById(R.id.recording_btn_stop);
+        stopBtn = (Button) layout.findViewById(R.id.recording_btn_close);
         stopBtn.setOnClickListener(RecordingDialog.this);
     }
 

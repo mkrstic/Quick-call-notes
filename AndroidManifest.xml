@@ -8,6 +8,8 @@
             android:minSdkVersion="7"
             android:targetSdkVersion="17"/>
 
+    <uses-feature android:name="android.hardware.microphone" android:required="false"/>
+
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
     <uses-permission android:name="android.permission.READ_CALL_LOG"/>
@@ -16,6 +18,7 @@
     <uses-permission android:name="android.permission.RECORD_AUDIO"/>
     <uses-permission android:name="android.permission.READ_CALENDAR"/>
     <uses-permission android:name="android.permission.WRITE_CALENDAR"/>
+
 
     <application
             android:name="com.mkrstic.callnotes.AfterCallNotesApplication"
@@ -42,6 +45,17 @@
         <activity
                 android:name=".activity.CreateNoteActivity"
                 android:label="Make note"/>
+
+        <activity android:name=".activity.PlayingActivity"
+                  android:theme="@android:style/Theme.Dialog"
+                  android:label="@string/title_activity_playing">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="http" android:host="voice.my"/>
+            </intent-filter>
+        </activity>
 
 
         <receiver android:name=".receiver.CallReceiver">

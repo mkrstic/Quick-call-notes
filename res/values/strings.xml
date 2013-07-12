@@ -5,6 +5,7 @@
     <string name="hello_world">Hello world!</string>
     <string name="menu_settings">Settings</string>
     <string name="title_activity_after_call">Quick Call Notes</string>
+    <string name="title_activity_playing">Recorded note</string>
     <string name="action_settings">Settings</string>
     <string name="voice_note">Voice note</string>
     <string name="text_note">Text note</string>
@@ -16,9 +17,11 @@
     <string name="action_discard">Discard</string>
     <string name="action_new">Take note</string>
     <string name="action_done">Done</string>
+    <string name="action_close">Close</string>
     <string name="action_discard">Discard</string>
     <string name="calendar_event_title">Phone call with %1$s (%2$s)</string>
     <string name="title_activity_launcher">Quick call notes</string>
     <string name="recording">Recording...</string>
     <string name="action_restart">Restart</string>
+    <string name="playing">Playing...</string>
 </resources>

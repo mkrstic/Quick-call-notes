@@ -21,7 +21,6 @@ public class CallReceiver extends BroadcastReceiver {
 
     private Context mContext;
     private Intent mIntent;
-    private static String prevStateStr;
     private static int prevState;
     public String LOGTAG = "CallReceiver";
 
@@ -31,40 +30,20 @@ public class CallReceiver extends BroadcastReceiver {
         mIntent = intent;
         TelephonyManager tm = (TelephonyManager) context.getSystemService(Context.TELEPHONY_SERVICE);
         tm.listen(new MyPhoneStateListener(), PhoneStateListener.LISTEN_CALL_STATE);
-        Log.i(LOGTAG, "PhoneStateListener attached");
     }
 
     private class MyPhoneStateListener extends PhoneStateListener {
 
         @Override
         public void onCallStateChanged(int state, String incomingNumber) {
-            String callState = "Unknown";
-            switch (state) {
-                case TelephonyManager.CALL_STATE_IDLE:
-                    callState = "IDLE";
-                    break;
-                case TelephonyManager.CALL_STATE_RINGING:
-                    callState = "Incoming number - Ringing (" + incomingNumber + ")";
-                    break;
-                case TelephonyManager.CALL_STATE_OFFHOOK:
-                    String dialingNumber = mIntent.getStringExtra(Intent.EXTRA_PHONE_NUMBER);
-                    callState = "Outgoing number - Dialing (" + dialingNumber + ")";
-                    break;
-            }
-            Log.i(LOGTAG, "onCallStateChanged: prevState=" + prevStateStr);
-            Log.i(LOGTAG, "onCallStateChanged: newState=" + callState);
-            handleStateChange(state);
-            prevStateStr = callState;
-            prevState = state;
             super.onCallStateChanged(state, incomingNumber);
+            handleStateChange(state);
+            prevState = state;
         }
         private void handleStateChange(int curState) {
             if (prevState == TelephonyManager.CALL_STATE_OFFHOOK && curState == TelephonyManager.CALL_STATE_IDLE) {
-                Log.i(LOGTAG, "Starting handler...");
                 Handler handler = new Handler();
-                handler.postDelayed(new StartAfterCallActivity(), 300);
-            } else {
-                Log.i(LOGTAG, "Nema potrebe za pokretanjem.");
+                handler.postDelayed(new StartAfterCallActivity(), 500);
             }
         }
     }
@@ -74,12 +53,10 @@ public class CallReceiver extends BroadcastReceiver {
         public void run() {
             final CallInfo lastCallInfo = findLastCall();
             if (lastCallInfo == null || lastCallInfo.getType() == CallLog.Calls.MISSED_TYPE) {
-                Log.i(LOGTAG, "Last call not found or type is missed");
                 return;
             }
-            Log.i(LOGTAG, "Last call =" + lastCallInfo);
             Intent intent = new Intent(mContext, AfterCallActivity.class);
-            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
             intent.putExtra(AfterCallActivity.EXTRA_CALL, lastCallInfo);
             mContext.startActivity(intent);
         }
