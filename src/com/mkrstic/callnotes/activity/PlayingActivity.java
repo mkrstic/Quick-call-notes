@@ -11,7 +11,7 @@ import android.widget.Chronometer;
 import android.widget.Toast;
 
 import com.mkrstic.callnotes.R;
-import com.mkrstic.callnotes.util.PlayingHelper;
+import com.mkrstic.callnotes.mock.PlayingUtil;
 import com.mkrstic.callnotes.util.SharedPrefsHelper;
 
 /**
@@ -21,7 +21,7 @@ public class PlayingActivity extends Activity implements View.OnClickListener, M
     private String LOGTAG = "PlayingActivity";
     private Button closeBtn;
     private Chronometer durationChronometer;
-    private PlayingHelper player;
+    private PlayingUtil player;
     private boolean isFinishedPlaying;
     private String filePath;
 
@@ -73,7 +73,7 @@ public class PlayingActivity extends Activity implements View.OnClickListener, M
     }
 
     private void startPlaying() {
-        player = new PlayingHelper(filePath);
+        player = new PlayingUtil(filePath);
         player.setOnCompletionListener(this);
         player.startPlaying();
         durationChronometer.start();

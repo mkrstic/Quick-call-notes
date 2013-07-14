@@ -2,9 +2,7 @@ package com.mkrstic.callnotes.activity;
 
 
 import android.content.Context;
-import android.content.pm.PackageManager;
 import android.os.AsyncTask;
-import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -23,13 +21,11 @@ import com.actionbarsherlock.app.ActionBar;
 import com.actionbarsherlock.app.SherlockFragmentActivity;
 import com.actionbarsherlock.view.Menu;
 import com.actionbarsherlock.view.MenuItem;
-
 import com.mkrstic.callnotes.R;
-
+import com.mkrstic.callnotes.mock.CalendarUtil;
+import com.mkrstic.callnotes.mock.RecordingUtil;
 import com.mkrstic.callnotes.model.CallInfo;
 import com.mkrstic.callnotes.model.RecordingListener;
-import com.mkrstic.callnotes.util.CalendarHelper;
-import com.mkrstic.callnotes.util.RecordingHelper;
 import com.mkrstic.callnotes.util.SharedPrefsHelper;
 
 
@@ -81,7 +77,7 @@ public class CreateNoteActivity extends SherlockFragmentActivity implements View
                 finish();
                 return true;
             case R.id.createnote_menuitem_record:
-                if (hasMicrophone()) {
+                if (RecordingUtil.hasMicrophone(CreateNoteActivity.this)) {
                     boolean isSDPresent = android.os.Environment.getExternalStorageState().equals(android.os.Environment.MEDIA_MOUNTED);
                     if (isSDPresent) {
                         showRecordingDialog();
@@ -156,7 +152,7 @@ public class CreateNoteActivity extends SherlockFragmentActivity implements View
             //throw new NullPointerException("Recording file is null.");
             return;
         }
-        boolean deleted = RecordingHelper.removeRecording(recordedFile);
+        boolean deleted = RecordingUtil.removeRecording(recordedFile);
         if (deleted) {
             recordedFile = null;
             Animation slideAnim = AnimationUtils.makeOutAnimation(CreateNoteActivity.this, true);
@@ -205,13 +201,6 @@ public class CreateNoteActivity extends SherlockFragmentActivity implements View
         recordingDialog.show(fragmentManager, dialogTag);
     }
 
-    private boolean hasMicrophone() {
-        int sdkVersion = Build.VERSION.SDK_INT;
-        if (sdkVersion > 7) {
-            return getPackageManager().hasSystemFeature(PackageManager.FEATURE_MICROPHONE);
-        }
-        return true; // pretpostavka da mikrofon postoji jer se ne moze proveriti
-    }
 
 
     private void bindViews() {
@@ -229,7 +218,7 @@ public class CreateNoteActivity extends SherlockFragmentActivity implements View
 
         @Override
         protected Integer doInBackground(CallInfo... params) {
-            CalendarHelper calHelper = new CalendarHelper(context);
+            CalendarUtil calHelper = new CalendarUtil(context);
             CallInfo callInfo = params[0];
             return calHelper.addEvent(callInfo);
         }

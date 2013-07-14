@@ -8,8 +8,6 @@ import android.os.Handler;
 import android.provider.CallLog;
 import android.telephony.PhoneStateListener;
 import android.telephony.TelephonyManager;
-import android.util.Log;
-import android.widget.Toast;
 
 import com.mkrstic.callnotes.activity.AfterCallActivity;
 import com.mkrstic.callnotes.model.CallInfo;
@@ -44,6 +42,7 @@ public class CallReceiver extends BroadcastReceiver {
             if (prevState == TelephonyManager.CALL_STATE_OFFHOOK && curState == TelephonyManager.CALL_STATE_IDLE) {
                 Handler handler = new Handler();
                 handler.postDelayed(new StartAfterCallActivity(), 500);
+                
             }
         }
     }

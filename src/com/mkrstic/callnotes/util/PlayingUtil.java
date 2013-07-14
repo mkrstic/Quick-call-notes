@@ -6,13 +6,13 @@ import android.media.MediaPlayer;
 import java.io.IOException;
 
 
-public class PlayingHelper {
+public class PlayingUtil {
 
     private final String filePath;
     private MediaPlayer player = null;
     private MediaPlayer.OnCompletionListener onCompletionListener;
 
-    public PlayingHelper(final String filePath) {
+    public PlayingUtil(final String filePath) {
         this.filePath = filePath;
     }
 

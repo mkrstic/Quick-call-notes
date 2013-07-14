@@ -18,11 +18,11 @@ import java.util.TimeZone;
 /**
  * Created by mladen on 7/4/13.
  */
-public class CalendarHelper {
+public class CalendarUtil {
 
     private final Context context;
 
-    public CalendarHelper(Context context) {
+    public CalendarUtil(Context context) {
         this.context = context;
     }
 

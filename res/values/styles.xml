@@ -1,6 +1,11 @@
 <resources>
 
-    <style name="AppTheme" parent="@style/Theme.Sherlock" />
+    <style name="AppBaseTheme" parent="Theme.Sherlock" />
+
+
+    <style name="AppTheme" parent="AppBaseTheme" />
+    <style name="AppDialog" parent="android:Theme.Dialog"/>
+
     <color name="whitegrey">#FFF2F2F2</color>
     <style name="SlideUpDown">
         <item name="android:windowEnterAnimation">@anim/slide_down</item>

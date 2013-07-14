@@ -12,18 +12,11 @@ package com.mkrstic.callnotes.mock;
  */
 
 import android.content.Context;
-import android.media.MediaPlayer;
-import android.media.MediaRecorder;
-import android.os.Environment;
-import android.util.Log;
 
 import com.mkrstic.callnotes.model.CallInfo;
 
-import java.io.File;
-import java.io.IOException;
 
-
-public class RecordingHelper {
+public class RecordingUtil {
 
     private final String filePath;
 
@@ -31,7 +24,7 @@ public class RecordingHelper {
         return true;
     }
 
-    public RecordingHelper(final Context context, final CallInfo callInfo) {
+    public RecordingUtil(final Context context, final CallInfo callInfo) {
 
         filePath = "/sdcard" + "/" + "voice_message" + "_" + callInfo.getDateTimeInMillis() + ".3gp";
     }
@@ -55,9 +48,8 @@ public class RecordingHelper {
     public static void startPlaying(String filePath) {
 
     }
+    public static boolean hasMicrophone(final Context context) {
+        return true;
+    }
 
-    /*public void stopPlaying() {
-        player.release();
-        player = null;
-    }*/
 }

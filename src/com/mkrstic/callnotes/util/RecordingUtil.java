@@ -12,8 +12,9 @@ package com.mkrstic.callnotes.util;
  */
 
 import android.content.Context;
-import android.media.MediaPlayer;
+import android.content.pm.PackageManager;
 import android.media.MediaRecorder;
+import android.os.Build;
 import android.os.Environment;
 import android.util.Log;
 
@@ -23,19 +24,21 @@ import java.io.File;
 import java.io.IOException;
 
 
-public class RecordingHelper {
+public class RecordingUtil {
     static final private double EMA_FILTER = 0.6;
 
     private double EMA = 0.0;
     private final String filePath;
     private MediaRecorder recorder = null;
+    private Context context;
 
     public static boolean removeRecording(String filePath) {
         File file = new File(filePath);
         return file.delete();
     }
 
-    public RecordingHelper(final Context context, final CallInfo callInfo) {
+    public RecordingUtil(final Context context, final CallInfo callInfo) {
+        this.context = context;
         String appDirStr = Environment.getExternalStorageDirectory().getAbsolutePath() + "/" + context.getApplicationInfo().packageName;
         File appDir = new File(appDirStr);
         if (!appDir.exists()) {
@@ -53,7 +56,7 @@ public class RecordingHelper {
         try {
             recorder.prepare();
         } catch (IOException e) {
-            Log.e(RecordingHelper.class.getName(), "prepare() failed");
+            Log.e("RecordingUtil", "prepare() failed", e);
         }
         recorder.start();
     }
@@ -95,6 +98,14 @@ public class RecordingHelper {
         double amp = getAmplitude();
         EMA = EMA_FILTER * amp + (1.0 - EMA_FILTER) * EMA;
         return EMA;
+    }
+
+    public static boolean hasMicrophone(final Context context) {
+        int sdkVersion = Build.VERSION.SDK_INT;
+        if (sdkVersion > 7) {
+            return context.getPackageManager().hasSystemFeature(PackageManager.FEATURE_MICROPHONE);
+        }
+        return true; // pretpostavka da mikrofon postoji jer se ne moze proveriti
     }
 
 

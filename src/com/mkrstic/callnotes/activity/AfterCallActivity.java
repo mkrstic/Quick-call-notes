@@ -17,7 +17,7 @@ import android.widget.TextView;
 
 import com.mkrstic.callnotes.R;
 import com.mkrstic.callnotes.model.CallInfo;
-import com.mkrstic.callnotes.util.ContactHelper;
+import com.mkrstic.callnotes.mock.ContactUtil;
 
 import java.io.InputStream;
 import java.util.Date;
@@ -109,7 +109,7 @@ public class AfterCallActivity extends Activity implements View.OnClickListener 
         @Override
         protected Bitmap doInBackground(String... params) {
             final String phoneNumber = params[0];
-            ContactHelper contactHelper = new ContactHelper(AfterCallActivity.this);
+            ContactUtil contactHelper = new ContactUtil(AfterCallActivity.this);
             Long contactId = contactHelper.fetchContact(phoneNumber);
             if (contactId != null) {
                 InputStream is = contactHelper.fetchPhoto(contactId);

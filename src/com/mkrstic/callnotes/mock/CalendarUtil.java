@@ -1,28 +1,18 @@
 package com.mkrstic.callnotes.mock;
 
-import android.content.ContentResolver;
-import android.content.ContentValues;
 import android.content.Context;
-import android.database.Cursor;
 import android.net.Uri;
-import android.os.Build;
-import android.provider.CalendarContract;
-import android.text.TextUtils;
 
-import com.mkrstic.callnotes.R;
 import com.mkrstic.callnotes.model.CallInfo;
-
-import java.util.Calendar;
-import java.util.TimeZone;
 
 /**
  * Created by mladen on 7/4/13.
  */
-public class CalendarHelper {
+public class CalendarUtil {
 
 
 
-    public CalendarHelper(Context context) {
+    public CalendarUtil(Context context) {
 
     }
 

@@ -35,7 +35,7 @@
             </intent-filter>
         </activity>
         <activity
-                android:theme="@android:style/Theme.Dialog"
+                android:theme="@style/AppDialog"
                 android:name=".activity.AfterCallActivity"
                 android:label="@string/title_activity_after_call"
                 >
@@ -47,7 +47,7 @@
                 android:label="Make note"/>
 
         <activity android:name=".activity.PlayingActivity"
-                  android:theme="@android:style/Theme.Dialog"
+                  android:theme="@style/AppDialog"
                   android:label="@string/title_activity_playing">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
